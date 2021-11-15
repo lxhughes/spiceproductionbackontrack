@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8792"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   sodipodi:docname="silos.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview8794"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="0.51134961"
+     inkscape:cx="96.802656"
+     inkscape:cy="483.03547"
+     inkscape:window-width="1312"
+     inkscape:window-height="802"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs8789">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient14649">
+      <stop
+         style="stop-color:#afdde9;stop-opacity:1;"
+         offset="0"
+         id="stop14645" />
+      <stop
+         style="stop-color:#afdde9;stop-opacity:0;"
+         offset="1"
+         id="stop14647" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient14649"
+       id="radialGradient14651"
+       cx="51.483448"
+       cy="130.64894"
+       fx="51.483448"
+       fy="130.64894"
+       r="15.263936"
+       gradientTransform="matrix(1,0,0,1.4745764,0,-62.002898)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#2b1100;fill-opacity:1;stroke:#260000;stroke-width:2.37255;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path9417-6"
+       ry="9.8245974"
+       rx="1.0284295"
+       cy="148.03104"
+       cx="51.471703"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/images/silo-full.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#37abc8;fill-opacity:1;stroke:none;stroke-width:1.61807;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path13471-1"
+       cx="52.047848"
+       cy="129.58003"
+       rx="20.438154"
+       ry="19.920731"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/images/silo-full.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="path8818-2"
+       style="fill:none;stroke:#260000;stroke-width:2.365;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 50.72363,150.5 A 21.214285,20.696863 0 0 1 30.527876,129.827 21.214285,20.696863 0 0 1 51.742159,109.13014 21.214285,20.696863 0 0 1 72.956445,129.827 v 0 a 21.214285,20.696863 0 0 1 -3.861646,11.90611"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/images/silo-full.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:url(#radialGradient14651);fill-opacity:1;stroke:none;stroke-width:2.03101;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path13805"
+       cx="51.483448"
+       cy="130.64894"
+       rx="15.263936"
+       ry="22.507839"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/images/silo-full.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#916f6f;fill-opacity:1;stroke:none;stroke-width:1.60754;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path13471"
+       cx="53.082695"
+       cy="55.893272"
+       rx="20.438154"
+       ry="19.66202"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/images/silo-empty.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="path8818"
+       style="fill:none;stroke:#260000;stroke-width:8.93858;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 195.62258 289.33994 A 80.179974 78.224365 0 0 1 119.29217 211.20579 A 80.179974 78.224365 0 0 1 199.47214 132.98142 A 80.179974 78.224365 0 0 1 279.65212 211.20579 L 279.65212 211.20579 A 80.179974 78.224365 0 0 1 265.05692 256.20526 "
+       transform="scale(0.26458333)"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/images/silo-empty.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#2b1100;fill-opacity:1;stroke:#260000;stroke-width:2.37255;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path9417"
+       ry="9.8245974"
+       rx="1.0284295"
+       cy="74.085564"
+       cx="52.50655"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/images/silo-empty.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#2b1100;fill-opacity:1;stroke:none;stroke-width:8.93858;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path12726"
+       sodipodi:type="arc"
+       sodipodi:cx="56.916378"
+       sodipodi:cy="64.160278"
+       sodipodi:rx="16.557491"
+       sodipodi:ry="18.109755"
+       sodipodi:start="0"
+       sodipodi:end="0.0052173476"
+       sodipodi:arc-type="slice"
+       d="m 73.473869,64.160278 a 16.557491,18.109755 0 0 1 -2.25e-4,0.09448 l -16.557266,-0.09448 z"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/images/silo-empty.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

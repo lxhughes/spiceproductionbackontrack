@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="800"
+   height="665"
+   viewBox="0 0 211.66666 175.9479"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   sodipodi:docname="house_atreides_logo.svg"
+   inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/images/house_atreides_logo.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.0226992"
+     inkscape:cx="242.49555"
+     inkscape:cy="383.29941"
+     inkscape:window-width="1312"
+     inkscape:window-height="802"
+     inkscape:window-x="0"
+     inkscape:window-y="23"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     units="px"
+     width="793.70081px"
+     lock-margins="true" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#536c67;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 1.2438926,0.05079876 1.575755,33.351137 95.229066,123.89971 93.6768,162.70633 l 11.9007,12.93554 11.9007,-11.90069 V 122.34745 L 210.61409,33.351137 210.42851,0.05079876 107.12977,105.27253 Z"
+       id="path209" />
+    <path
+       style="fill:#6f918a;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 124.22818,70.711188 105.601,71.746032 93.182869,87.268595 106.63584,99.686633 119.57138,88.303429 113.36232,78.98989 123.71075,70.711188 h 0.51743"
+       id="path850"
+       sodipodi:nodetypes="cccccccc" />
+    <path
+       style="fill:#6f918a;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 19.481825,56.955752 0.556233,14.477089 56.355217,51.686119 -0.398384,16.58502 16.544748,12.82721 -2.66359,-28.89465 z"
+       id="path340" />
+    <path
+       style="fill:#6f918a;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 192.99428,56.666019 -0.6407,14.4736 -56.65586,51.356391 0.3016,16.58706 -16.61932,12.73045 2.83216,-28.87861 z"
+       id="path340-0" />
+  </g>
+</svg>

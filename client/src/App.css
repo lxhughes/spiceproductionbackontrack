@@ -1,0 +1,70 @@
+.App{
+    background-color: #35301D;
+}
+
+.App-header {
+  background-color: #DEBA6F;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  min-height: 5vh;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App-header h1{
+    color: #04314E;
+}
+
+.metricList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    min-height: 90vh;
+}
+
+.metricContainer{
+    background-color: #ECE3D5;
+    padding-left: 1em !important;
+}
+
+.metricContainer:nth-child(3n){
+    background-color: #FFF;
+}
+.metricContainer:nth-child(3n-1){
+    background-color: #FFF;
+}
+
+.metricContainer h2 {
+    color: #04314E;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.metric{
+}
+
+.number{
+    font-size: 4em;
+    color: #04314E;
+}
+
+.starsParentContainer.row{
+    width: 100%;
+    padding-left: 1em;
+}
+
+ul.stars{
+    list-style-type: none;
+    padding-left: 0;
+    padding-bottom: 1em;
+    float: right;
+}
+li.star{
+    display: inline-block;
+    margin-left: 0;
+    margin-right: 2px;
+}

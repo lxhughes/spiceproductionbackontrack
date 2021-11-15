@@ -1,0 +1,80 @@
+{
+    "date": {
+        "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+        "month": 10,
+        "day": 17,
+        "year": 10191,
+        "epoch": "A.G."
+    },
+    "metricCategories": [
+        {
+            "name": "Production",
+            "metrics": [
+                {
+                    "name": "Spice Harvested",
+                    "description": "How much spice has been harvested since House Atreides took control of the ASM?",
+                    "type": "bar",
+                    "unit": "tons",
+                    "categoryName": "regions",
+                    "categories": ["Arrakeen Metro Area", "Cielago Plain", "Great Flat", "Carthag", "Minor Erg"],
+                    "values": [29, 86, 42, 91, 17, 102],
+                    "topline": true
+                }
+            ]
+        },
+        {
+            "name": "Operations",
+            "metrics": [
+                {
+                    "name": "Silos Operational",
+                    "description": "House Harkonnenen left the ASM with only three of fifty silos operational. How many silos are operational now?",
+                    "type": "stars",
+                    "min": 0,
+                    "max": 50,
+                    "value": 5,
+                    "unit": "silos",
+                    "topline": true
+                }
+            ]
+        },
+        {
+            "name": "Financials",
+            "metrics": [
+                {
+                    "name": "Profit & Loss",
+                    "description": "Subtracting costs from revenue, what is the total profit each month?",
+                    "type": "trend",
+                    "xAxisUnit": "months",
+                    "xAxis": [3, 4, 5, 6, 7, 8, 9],
+                    "values": [-3129031, -2986909, -2994320, -2896032, -2743291, -2760321, -2753210],
+                    "unit": "solaris",
+                    "topline": true
+                },
+                {
+                    "name": "Revenue",
+                    "description": "YTD earnings from spice sales",
+                    "type": "number",
+                    "value": 7940321,
+                    "unit": "solaris"
+                }
+            ]
+        },
+        {
+            "name": "Defense",
+            "metrics": [
+                {
+                    "name": "Sandworm Attack Rate",
+                    "description": "How many minutes has it been since the last sandworm attack?",
+                    "topline": true,
+                    "type": "number",
+                    "unit": "minutes",
+                    "value": 0,
+                    "randomize": true,
+                    "min": 0,
+                    "max": 7,
+                    "incrementSeconds": true
+                }
+            ]
+        }
+    ]
+}
