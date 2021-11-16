@@ -6,10 +6,23 @@ import starEmpty from './assets/silo-empty.png';
 import data from './assets/data.json';
 import './App.css';
 
+/* Highcharts */
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
+
 /* Bootstrap */
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
+
+/* A constant with date information */
+const date = {
+    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    "month": 10,
+    "day": 17,
+    "year": 10191,
+    "epoch": "A.G."
+};
 
 /* Components */
 function myNavbar(){
@@ -130,19 +143,78 @@ function oneMetric(mt){
         )        
     }
     else if(mt.type === "bar"){
+        
+        const barData = mt.dataset.map(row => row.value);
+        const barCategories = mt.dataset.map(row => row.label);
+        const barWidth = 10; 
+        const chartHeight = (barCategories.length + 1) * (barWidth * 2.5);
+        
+        /* Highcharts bar chart options */
+        const barOptions = {};
+        barOptions.title = { text: mt.charttitle, style: { fontSize: "1.2em" } }; // Could be mt.name, but I Want to display it as h3 above not as chart title
+        barOptions.chart = { type: "bar", height: chartHeight, backgroundColor: "transparent" };
+        barOptions.xAxis = { categories: barCategories, lineWidth: 0 };
+        barOptions.yAxis = { title: { text: mt.unit }, visible: false };
+        barOptions.legend = { enabled: false };
+        barOptions.plotOptions = { bar: { pointPadding: 0, pointWidth: barWidth } }
+        barOptions.series = [];
+        const firstSeries = { data: barData, color: "#04314E", borderWidth: 0, name: mt.unit, dataLabels: { enabled: true, style: { textOutline: "none" } } };
+        barOptions.series.push(firstSeries);
+        
+        /* End D3 barchart */
+        
         viz = (
-            <div className='numberContainer'>
-                <div className='number'>{mt.values.reduce(sum)}</div>
-                <div className='unit'>{mt.unit}</div>
+            <div className='barChartParentContainer'>
+            
+                <div className='numberContainer'>
+                    <div className='number'>{barData.reduce(sum)}</div>
+                    <div className='unit'>{mt.unit}</div>
+                </div>
+
+                <div className='barChartContainer'>
+                    <HighchartsReact highcharts={Highcharts} options={barOptions} />
+                </div>
+                    
             </div>
         )    
     }
 
     else if(mt.type === "trend"){
+        
+        const lineData = mt.dataset.map(row => row.value);
+        const chartHeight = 250;
+        
+
+        let xAxis = mt.dataset.map(row => row.name);
+        
+        if(mt.xAxisUnit === "months"){
+            xAxis = mt.dataset.map(row => date.months[parseInt(row.label)] + " " + date.year);
+        }
+        
+        /* Highcharts line chart options */
+        const lineOptions = {};
+        lineOptions.title = { text: mt.charttitle, style: { fontSize: "1.2em" }};
+        lineOptions.chart = { type: "line", height: chartHeight, backgroundColor: "transparent" };
+        lineOptions.xAxis = { categories: xAxis };
+        lineOptions.yAxis = { title: { text: mt.unit } };
+        lineOptions.legend = { enabled: false };
+        lineOptions.series = [];
+        const firstSeries = { data: lineData, color: "#04314E", name: mt.unit, dataLabels: { enabled: false } };
+        lineOptions.series.push(firstSeries);
+        
+        
         viz = (
-            <div className='numberContainer'>
-                <div className='number'>{mt.values[mt.values.length-1]}</div>
-                <div className='unit'>{mt.unit}</div>
+            <div className='lineChartParentContainer'>
+            
+                <div className='numberContainer'>
+                    <div className='number'>{lineData[lineData.length-1]}</div>
+                    <div className='unit'>{mt.unit}</div>
+                </div>
+            
+                <div className='lineChartContainer'>
+                        <HighchartsReact highcharts={Highcharts} options={lineOptions} />
+                    </div>
+            
             </div>
         )
     }

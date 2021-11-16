@@ -1,11 +1,4 @@
 {
-    "date": {
-        "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-        "month": 10,
-        "day": 17,
-        "year": 10191,
-        "epoch": "A.G."
-    },
     "metricCategories": [
         {
             "name": "Production",
@@ -13,11 +6,17 @@
                 {
                     "name": "Spice Harvested",
                     "description": "How much spice has been harvested since House Atreides took control of the ASM?",
+                    "charttitle": "Spice Harvested by Region",
                     "type": "bar",
                     "unit": "tons",
                     "categoryName": "regions",
-                    "categories": ["Arrakeen Metro Area", "Cielago Plain", "Great Flat", "Carthag", "Minor Erg"],
-                    "values": [29, 86, 42, 91, 17, 102],
+                    "dataset": [
+                        {"label": "Arrakeen Metro Area", "value": 29},
+                        {"label": "Cielago Plain", "value": 86},
+                        {"label": "Great Flat", "value": 42},
+                        {"label": "Carthag", "value": 91},
+                        {"label": "Minor Erg", "value": 17}
+                    ],
                     "topline": true
                 }
             ]
@@ -42,11 +41,19 @@
             "metrics": [
                 {
                     "name": "Profit & Loss",
-                    "description": "Subtracting costs from revenue, what is the total profit each month?",
+                    "description": "Subtracting costs from revenue, what is the total profit this month?",
+                    "charttitle": "Net Profit by Month",
                     "type": "trend",
                     "xAxisUnit": "months",
-                    "xAxis": [3, 4, 5, 6, 7, 8, 9],
-                    "values": [-3129031, -2986909, -2994320, -2896032, -2743291, -2760321, -2753210],
+                    "dataset": [
+                        { "label": 3, "value": -3129031 },
+                        { "label": 4, "value": -2986909 },
+                        { "label": 5, "value": -2994320 },
+                        { "label": 6, "value": -2896032 },
+                        { "label": 7, "value": -2743291 },
+                        { "label": 8, "value": -2760321 },
+                        { "label": 9, "value": -2753210 }
+                    ],
                     "unit": "solaris",
                     "topline": true
                 },
