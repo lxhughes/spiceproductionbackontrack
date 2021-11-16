@@ -55,25 +55,29 @@ function randomNum(min, max){
     return Math.floor(Math.random() *  (max - min)) + min;
 }
 
-// Format a numeric value
-function format(mt){
+// Format a number with optional params
+function formatValue(val, params){
     
-    let val = mt.value;
-    
-     if(mt.randomize){
-        mt.value = randomNum(mt.min, mt.max);
+    if(params.randomize){
+        val = randomNum(params.min, params.max);
     }
     
-    if(mt.unit === "minutes"){
+    if(params.unit === "minutes"){
         
         let secs = 0;
-        if(mt.randomize) secs = randomNum(0,59);
+        if(params.randomize) secs = randomNum(0,59);
         
-        if(mt.incrementSeconds){
+        if(params.incrementSeconds){
             secs = setInterval(secs=>secs++,1000); /* This isn't working */
         } 
             
         val = val + ":" + secs.toString().padStart(2,'0');
+    }
+    
+    console.log(val);
+    
+    if(!isNaN(val)){
+        val = val.toLocaleString();
     }
     
     return val;
@@ -87,13 +91,15 @@ function format(mt){
 /* Add visual Proportion logic */
 function oneMetric(mt){
     
+    console.log(mt);
+    
     let viz = "";
     
     if(mt.type === "number") {
         viz = (
             <div className='numberContainer'>
-               <div className='number'>{format(mt)}</div>
-               <div className='unit'>{mt.unit}</div>
+               <div className='number'>{formatValue(mt.value, mt.valueparams)}</div>
+               <div className='unit'>{mt.valueparams.unit}</div>
               </div>
         );
     }
@@ -108,7 +114,7 @@ function oneMetric(mt){
         
         // Full Stars
         for(var i=0; i<mt.value; i++){
-            let falt = 'Full '+mt.unit;
+            let falt = 'Full '+mt.valueparams.unit;
             let fstar = (<li className='star' key={i}>
                             <img src={starFull} alt={falt} width={starWidth} height={starHeight} />
                         </li>);
@@ -116,8 +122,8 @@ function oneMetric(mt){
         }
         
         // Empty stars
-        for(var s=mt.value; s<mt.max; s++){
-            let ealt = 'Empty '+mt.unit;
+        for(var s=mt.value; s<mt.valueparams.max; s++){
+            let ealt = 'Empty '+mt.valueparams.unit;
             let estar = (<li className='star' key={s}>
                             <img src={starEmpty} alt={ealt} width={starWidth} height={starHeight} />
                         </li>);
@@ -128,9 +134,9 @@ function oneMetric(mt){
             <div className='starsParentContainer row'>
             
                 <div className='numberContainer col-sm-3'>
-                    <span className='number'>{mt.value}</span>/
-                    <span className='maxNumber'>{mt.max}</span>
-                    <div className='unit'>{mt.unit}</div>
+                    <span className='number'>{formatValue(mt.value, mt.valueparams)}</span>/
+                    <span className='maxNumber'>{mt.valueparams.max}</span>
+                    <div className='unit'>{mt.valueparams.unit}</div>
                 </div>
             
                 <div className='starsContainer col-sm-9'>
@@ -167,8 +173,8 @@ function oneMetric(mt){
             <div className='barChartParentContainer'>
             
                 <div className='numberContainer'>
-                    <div className='number'>{barData.reduce(sum)}</div>
-                    <div className='unit'>{mt.unit}</div>
+                    <div className='number'>{formatValue(barData.reduce(sum), mt.valueparams)}</div>
+                    <div className='unit'>{mt.valueparams.unit}</div>
                 </div>
 
                 <div className='barChartContainer'>
@@ -207,8 +213,8 @@ function oneMetric(mt){
             <div className='lineChartParentContainer'>
             
                 <div className='numberContainer'>
-                    <div className='number'>{lineData[lineData.length-1]}</div>
-                    <div className='unit'>{mt.unit}</div>
+                    <div className='number'>{formatValue(lineData[lineData.length-1],mt.valueparams)}</div>
+                    <div className='unit'>{mt.valueparams.unit}</div>
                 </div>
             
                 <div className='lineChartContainer'>
