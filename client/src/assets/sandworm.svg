@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="sandworm.svg"
+   inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.0226992"
+     inkscape:cx="392.58855"
+     inkscape:cy="324.63113"
+     inkscape:window-width="1312"
+     inkscape:window-height="802"
+     inkscape:window-x="1757"
+     inkscape:window-y="199"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient37356">
+      <stop
+         style="stop-color:#c8b7b7;stop-opacity:1;"
+         offset="0"
+         id="stop37352" />
+      <stop
+         style="stop-color:#c8b7b7;stop-opacity:0;"
+         offset="1"
+         id="stop37354" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2643"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#5d6c53;stop-opacity:1;"
+         offset="0"
+         id="stop2641" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient37356"
+       id="linearGradient37358"
+       x1="62.608013"
+       y1="80.200348"
+       x2="66.229965"
+       y2="69.334496"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#d5f6ff;fill-opacity:0.829268;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="rect3369"
+       width="152.63937"
+       height="78.130653"
+       x="26.905924"
+       y="17.592335"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-2.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#c8b7b7;stroke-width:2.365"
+       id="rect846"
+       width="152.63937"
+       height="26.388496"
+       x="26.905924"
+       y="69.334496"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-2.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:none;stroke-width:2.36499993;stroke:#5d6c53;stroke-opacity:0;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2297"
+       width="17.84449"
+       height="4.6909561"
+       x="115.80316"
+       y="55.952007"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <g
+       id="g6932"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"
+       transform="translate(-5.8208336)">
+      <path
+         id="rect1204"
+         style="fill:#5d6c53;stroke-width:2.18747"
+         d="m 115.80316,55.952006 h 38.28191 l 10.02285,14.48778 h -57.87204 z"
+         sodipodi:nodetypes="ccccc" />
+      <rect
+         style="fill:#c4c8b7;stroke-width:2.365"
+         id="rect958"
+         width="55.364109"
+         height="12.418118"
+         x="107.10627"
+         y="52.777004" />
+      <g
+         id="g2169"
+         transform="matrix(-0.98480775,-0.12181905,0.17364818,-0.69087016,263.59885,130.34847)"
+         style="fill:#a7ac93">
+        <rect
+           style="fill:#a7ac93;stroke-width:2.365"
+           id="rect1026"
+           width="5.1742158"
+           height="10.348432"
+           x="126.00912"
+           y="62.101704" />
+        <rect
+           style="fill:#a7ac93;stroke-width:2.365"
+           id="rect1026-2"
+           width="5.1742158"
+           height="10.348432"
+           x="132.61256"
+           y="60.538326" />
+        <rect
+           style="fill:#a7ac93;stroke-width:2.365"
+           id="rect1026-2-5"
+           width="5.1742158"
+           height="10.348432"
+           x="139.37425"
+           y="61.067493" />
+        <rect
+           style="fill:#a7ac93;stroke-width:2.365"
+           id="rect1026-2-1"
+           width="5.1742158"
+           height="10.348432"
+           x="146.25333"
+           y="61.067493" />
+      </g>
+      <rect
+         style="fill:#a7ac93;stroke:none;stroke-width:1.92068;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+         id="rect2573"
+         width="16.105198"
+         height="12.51207"
+         x="107.10627"
+         y="52.777004" />
+      <rect
+         style="fill:#454837;fill-opacity:0.829268;stroke:none;stroke-width:0.690379;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+         id="rect2861"
+         width="2.0001409"
+         height="4.3399038"
+         x="152.08493"
+         y="54.799709" />
+      <rect
+         style="fill:#454837;fill-opacity:0.829268;stroke:none;stroke-width:0.707923;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+         id="rect2861-7"
+         width="2.0001409"
+         height="4.5632834"
+         x="155.31995"
+         y="54.711586" />
+      <rect
+         style="fill:#454837;fill-opacity:0.829268;stroke:none;stroke-width:0.740017;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+         id="rect2861-0"
+         width="2.0001409"
+         height="4.9864149"
+         x="158.43622"
+         y="54.465908" />
+      <path
+         id="rect3415"
+         style="fill:#1c2422;stroke-width:1.39614;stroke-opacity:0.776053"
+         d="m 131.07141,59.885438 22.01658,3.76314 -0.98222,1.640498 h -28.88138 z"
+         sodipodi:nodetypes="ccccc" />
+    </g>
+    <ellipse
+       style="fill:#a7ac93;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path7090"
+       cx="119.7831"
+       cy="56.140244"
+       rx="47.861496"
+       ry="36.736931"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:#a7ac93;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 104.00174,22.249129 c -20.779141,5.526369 -21.076744,3.703337 -36.21951,12.676828 -0.839353,0.497393 -1.328912,1.434735 -2.069687,2.069688 -1.677003,1.437431 -3.488092,2.712651 -5.174216,4.139371 -2.369476,2.004941 -1.634307,2.08634 -3.36324,4.915506 -0.575876,0.94234 -1.407065,1.70361 -2.069687,2.587109 -2.876021,3.834694 -5.967386,7.512312 -8.796168,11.383275 -1.935597,2.648712 -3.72567,5.398743 -5.691637,8.020034 -0.450168,0.600223 -0.852977,1.223542 -1.293554,1.810975 -0.391252,0.521671 -1.258591,0.964919 -1.552265,1.552265 -0.05599,0.11199 -0.0092,1.011888 0,1.034844 0.302149,0.755369 0.980649,1.31871 1.293556,2.069687 0.241466,0.579519 0.236654,1.249439 0.517419,1.810975 0.442039,0.884076 3.185713,3.420753 3.36324,3.62195 0.623864,0.707046 2.247133,3.86221 3.104531,4.398084 2.164914,1.353071 5.783273,2.383041 8.020034,2.845819 4.299474,0.889547 1.727618,-0.03421 4.656796,0.258712 2.328082,0.232807 4.682789,0.616222 6.985191,1.034841 1.140582,0.20738 3.594687,-1.281623 3.62195,-1.293553 0.35333,-0.154581 0.810681,-0.203595 1.034844,-0.517422 0.805238,-1.127332 -0.05195,-4.018505 1.293555,-4.915506 1.152695,-0.768461 9.220277,-2.245696 10.607141,-1.552263 1.12377,0.561885 1.517681,0.678368 2.587109,1.034844 0.45189,0.150627 0.655688,0.649745 1.034843,0.776131 0.05221,0.01741 0.948767,-0.08608 1.034844,0 0.06098,0.06098 -0.06098,0.197731 0,0.25871 0.109702,0.109704 1.111041,0.487002 1.293553,0.517422 2.056776,0.342796 4.478711,0.371824 6.467771,1.034843 0.662475,0.220827 1.182069,0.799005 1.810975,1.034844 2.08901,0.783378 5.765432,0.258709 7.761322,0.258709 4.71822,0 6.89256,0.6754 11.12457,-2.069684 6.70329,-4.348083 9.80226,-14.22124 10.86585,-21.472996 0.42548,-2.901021 0.15211,-5.868061 0,-8.796168 -0.1932,-3.719182 -0.13159,-7.511563 -1.03484,-11.124565 -1.01371,-4.054808 -2.91757,-7.84144 -4.6568,-11.641986 -0.59725,-1.3051 -1.55471,-2.413064 -2.3284,-3.62195 -0.6061,-0.947044 -1.25312,-1.869574 -1.81097,-2.845819 -0.26864,-0.470109 -0.36358,-1.587221 -1.03484,-1.810976 -1.29356,-0.431185 -2.58711,0.862369 -3.88067,1.293554 -0.97543,0.325145 -2.85543,0.08784 -3.88066,0.258711 -0.53331,0.08889 -1.22566,0.810078 -1.81097,0.517422 -0.53194,-0.265967 -1.44584,-1.187131 -1.81098,-1.552265 z"
+       id="path7320"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#ffb380;fill-opacity:1;stroke:none;stroke-width:1.26774;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path21684"
+       cx="128.83798"
+       cy="57.4338"
+       rx="32.080139"
+       ry="27.164633"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#ffb380;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path21989"
+       cx="131.00021"
+       cy="59.533207"
+       rx="8.3712902"
+       ry="11.93042"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       sodipodi:type="star"
+       style="fill:#ff7f2a;fill-opacity:1;stroke:none;stroke-width:3.64724;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path22183"
+       inkscape:flatsided="false"
+       sodipodi:sides="90"
+       sodipodi:cx="322.67551"
+       sodipodi:cy="393.07745"
+       sodipodi:r1="120.69452"
+       sodipodi:r2="60.34726"
+       sodipodi:arg1="0.86568498"
+       sodipodi:arg2="0.90059156"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 400.89987,484.99108 -40.73988,-44.61981 34.13776,49.85257 -37.52812,-47.35299 30.57706,52.11246 -34.13352,-49.85547 26.86739,54.11847 -30.57263,-52.11506 23.02683,55.86081 -26.86279,-54.12075 19.07408,57.33101 -23.02208,-55.86277 15.02841,58.5219 -19.06922,-57.33263 10.90953,59.42767 -15.02345,-58.52318 6.73749,60.04392 -10.90448,-59.42859 2.53262,60.36763 -6.73238,-60.04449 -1.68459,60.39725 -2.52749,-60.36785 -5.89358,60.13262 1.68972,-60.39711 -10.07386,59.57502 5.89868,-60.13211 -14.20506,58.72718 10.07892,-59.57417 -18.26707,57.59323 14.21006,-58.72597 -22.24007,56.17869 18.27196,-57.59168 -26.10472,54.49045 22.24484,-56.1768 -29.84219,52.53674 26.10934,-54.48823 -33.43427,50.32708 29.84665,-52.53421 -36.86347,47.87223 33.43855,-50.32424 -40.11307,45.18415 36.86753,-47.8691 -43.16724,42.27594 40.11691,-45.18074 -46.01111,39.16176 43.17083,-42.27227 -48.63081,35.85679 46.01443,-39.15785 -51.01359,32.37713 48.63386,-35.85266 -53.14785,28.73973 51.01635,-32.3728 -55.02316,24.96232 53.15028,-28.73522 -56.63041,21.06329 55.02528,-24.95764 -57.96176,17.06164 56.6322,-21.05848 -59.01073,12.97687 57.96321,-17.05672 -59.77221,8.82889 59.01184,-12.97187 -60.24248,4.63788 59.77296,-8.8238 -60.41925,0.42427 60.24287,-4.63276 -60.30167,-3.79139 60.41928,-0.41914 -59.8903,-7.98859 60.30135,3.79651 -59.18716,-12.14686 59.88962,7.99367 -58.19565,-16.24596 59.18612,12.15189 -56.92063,-20.26591 58.19427,16.25091 -55.36829,-24.18713 56.91891,20.27074 -53.54622,-27.9905 55.36625,24.19183 -51.46327,-31.65752 53.54384,27.99505 -49.12958,-35.17029 51.46057,31.66189 -46.55655,-38.51173 49.1266,35.17447 -43.7567,-41.66554 46.55328,38.51568 -40.74367,-44.61635 43.75316,41.66925 -37.53214,-47.34981 40.73988,44.61982 -34.13776,-49.85258 37.52812,47.353 -30.57706,-52.11247 34.13352,49.85548 -26.86739,-54.11847 30.57263,52.11506 -23.02683,-55.86082 26.8628,54.12076 -19.07409,-57.33102 23.02209,55.86277 -15.02842,-58.52189 19.06922,57.33263 -10.90952,-59.42767 15.02344,58.52317 -6.73748,-60.04391 10.90447,59.42859 -2.53262,-60.36763 6.73239,60.04448 1.68458,-60.39725 2.52749,60.36786 5.89358,-60.13262 -1.68971,60.39711 10.07386,-59.57502 -5.89869,60.13211 14.20507,-58.72718 -10.07892,59.57416 18.26706,-57.59322 -14.21005,58.72597 22.24006,-56.17869 -18.27195,57.59168 26.10472,-54.49045 -22.24484,56.1768 29.84219,-52.53675 -26.10935,54.48824 33.43428,-50.32708 -29.84666,52.5342 36.86347,-47.87222 -33.43855,50.32424 40.11307,-45.18415 -36.86753,47.86909 43.16724,-42.27593 -40.1169,45.18074 46.0111,-39.16176 -43.17083,42.27227 48.63082,-35.85679 -46.01444,39.15785 51.0136,-32.37713 -48.63386,35.85266 53.14784,-28.73973 -51.01634,32.37279 55.02316,-24.96231 -53.15029,28.73521 56.63041,-21.06329 -55.02528,24.95765 57.96176,-17.06164 -56.6322,21.05848 59.01074,-12.97688 -57.96322,17.05672 59.77221,-8.82888 -59.01183,12.97186 60.24247,-4.63788 -59.77295,8.82381 60.41924,-0.42428 -60.24286,4.63276 60.30166,3.79139 -60.41928,0.41915 59.8903,7.98859 -60.30135,-3.79652 59.18716,12.14687 -59.88962,-7.99368 58.19565,16.24596 -59.18612,-12.15189 56.92063,20.26591 -58.19427,-16.2509 55.3683,24.18713 -56.91891,-20.27075 53.54621,27.99051 -55.36624,-24.19183 51.46326,31.65751 -53.54384,-27.99505 49.12958,35.1703 -51.46057,-31.66189 46.55655,38.51173 -49.12659,-35.17447 43.75669,41.66554 -46.55328,-38.51568 40.74367,44.61635 -43.75316,-41.66925 z"
+       transform="matrix(0.27613372,0,0,0.22988776,39.861017,-33.591711)"
+       inkscape:transform-center-y="-1.7423305e-06"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       style="fill:url(#linearGradient37358);stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 72.956446,89.255226 c -1.252699,1.906421 -3.586417,2.306018 -5.691638,2.845818 -6.297094,1.614639 -9.22983,1.866906 -15.522649,1.552266 -1.047818,-0.05239 -4.418377,-3.118059 -5.174215,-3.621953 -1.912358,-1.274905 -4.065995,-2.002319 -5.950349,-3.36324 -1.005012,-0.725842 -2.604744,-2.560056 -3.363241,-3.62195 -0.560406,-0.784569 -0.358915,-1.894779 -0.517422,-2.845819 -0.202985,-1.217925 -0.601514,-2.399636 -0.776131,-3.621952 -0.224023,-1.568151 0,-3.336415 0,-4.915504 0,-8.064463 -0.02286,-12.829111 -1.810975,-20.696864 -0.41257,-1.815309 -0.966303,-3.600318 -1.293556,-5.432928 -0.106116,-0.594256 -0.42685,-2.237827 0,-1.810975 0.562197,0.562195 0.148508,1.624103 0.517422,2.328397 4.352578,8.309467 5.216689,8.219781 10.348433,15.522649 0.578216,0.822844 1.025187,1.730605 1.552266,2.587106 0.162957,0.264809 0.411162,1.068346 0.517419,0.776135 1.57362,-4.327451 1.951135,-9.777275 2.587109,-14.229096 0.148368,-1.038572 0.357897,-2.06761 0.517422,-3.104528 0.01312,-0.08524 -0.01691,-0.343273 0,-0.258713 0.806318,4.031592 1.329872,8.115086 2.069687,12.159409 0.648219,3.543591 1.455327,7.057522 2.069685,10.607143 0.226234,1.307129 0.100062,3.94621 0.776134,4.139372 0.483494,0.138141 0.880766,-0.488977 1.293553,-0.776132 1.571844,-1.093459 3.133725,-2.202807 4.656793,-3.36324 0.291029,-0.221734 0.517422,-1.034844 0.776134,-0.776134 0.365872,0.365874 0.131681,1.05188 0,1.552265 -0.305683,1.161595 -0.693316,2.32283 -1.293555,3.363241 -0.706803,1.225126 -1.765009,2.212303 -2.587107,3.36324 -0.05013,0.07018 -0.07571,0.300006 0,0.258712 0.9871,-0.538419 1.806861,-1.381064 2.845819,-1.810977 5.281477,-2.185437 5.969463,-2.386399 6.467768,2.845818 0.119362,1.253279 -0.219834,2.425584 0.258713,3.621953 0.128111,0.320275 0.700193,0.08366 1.034843,0 1.827208,-0.456803 3.605718,-1.095462 5.432925,-1.552265 0.591582,-0.147895 1.618144,-0.837206 1.810978,-0.25871 0.231963,0.695889 -3.104531,6.204887 -3.104531,6.209059 0,0.08624 0.172474,0 0.258712,0 0.948606,0 1.897211,0 2.845819,0 1.726893,0 4.138078,-1.122804 5.174215,0.25871 0.213339,0.28445 0.596027,0.922403 0.25871,1.034843 -0.983845,0.327949 -2.141717,0.455195 -3.104528,0.776132 -1.550562,0.516855 0.649803,-0.06619 -1.034844,0.776134 -0.739693,0.369845 -2.320713,-0.254871 -2.845818,-0.517422 z"
+       id="path34203" />
+    <circle
+       style="fill:#c8b7b7;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path37470"
+       cx="41.264374"
+       cy="52.647644"
+       r="0.64677697"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#c8b7b7;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path37472"
+       cx="36.995647"
+       cy="42.557926"
+       rx="0.5174216"
+       ry="0.3880662"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#c8b7b7;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path37474"
+       cx="36.090157"
+       cy="55.1054"
+       rx="0.64677697"
+       ry="0.7761324"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#c8b7b7;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path37476"
+       cx="41.523083"
+       cy="58.339283"
+       r="0.64677697"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#c8b7b7;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path37478"
+       cx="39.194683"
+       cy="61.57317"
+       rx="0.64677697"
+       ry="0.5174216"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#c8b7b7;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path37480"
+       cx="49.80183"
+       cy="56.010891"
+       rx="0.3880662"
+       ry="0.64677697"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <circle
+       style="fill:#c8b7b7;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path37482"
+       cx="56.140244"
+       cy="65.71254"
+       r="0.5174216"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#c8b7b7;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path37487"
+       cx="58.856705"
+       cy="62.090591"
+       rx="0.64677697"
+       ry="0.5174216"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#c8b7b7;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path37489"
+       cx="67.782234"
+       cy="73.0858"
+       rx="0.5174216"
+       ry="0.3880662"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#c8b7b7;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path37491"
+       cx="64.289635"
+       cy="69.593208"
+       rx="0.64677697"
+       ry="0.5174216"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#c8b7b7;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path37493"
+       cx="69.851913"
+       cy="78.389366"
+       rx="0.2587108"
+       ry="0.5174216"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#c8b7b7;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path37495"
+       cx="64.936409"
+       cy="64.289635"
+       rx="0.7761324"
+       ry="0.64677697"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <ellipse
+       style="fill:#c8b7b7;fill-opacity:1;stroke:none;stroke-width:0.964999;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.776053"
+       id="path37497"
+       cx="51.742161"
+       cy="63.384148"
+       rx="0.2587108"
+       ry="0.5174216"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/sandworm.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+  </g>
+</svg>

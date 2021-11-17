@@ -74,11 +74,11 @@
                     "description": "How many minutes has it been since the last sandworm attack?",
                     "topline": true,
                     "type": "number",
-                    "unit": "minutes", 
+                    "unit": "seconds", 
                     "randomize": "true", 
                     "incrementSeconds": true, 
                     "min": 0, 
-                    "max": 7,
+                    "max": 250,
                     "value": 0
                 }
             ]

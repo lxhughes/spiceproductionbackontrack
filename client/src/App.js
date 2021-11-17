@@ -1,5 +1,5 @@
 /* Basics */
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 /* Highcharts */
 import Highcharts from 'highcharts';
@@ -15,6 +15,8 @@ import atreidesLogo from './assets/house_atreides_logo.svg';
 import arrakisLogo from './assets/arrakis_spice_melange_logo.svg';
 import starFull from './assets/silo-full.png';
 import starEmpty from './assets/silo-empty.png';
+import timerRegular from './assets/harvester.gif';
+import timerReset from './assets/sandworm.png';
 import data from './assets/data.json';
 import './App.css';
 
@@ -84,15 +86,10 @@ class MetricCategories extends React.Component {
                                 <h3>{mt.name}</h3>
                                 <div className='description'>{mt.description}</div>
                             
-                                <div className='numberContainer'>
-                                    <div className='number'>
-                                        <OverallValue metricdata={mt} />
-                                    </div>
-                                    <div className='unit'>{mt.unit}</div>
-                                </div>
-                                                             
+                                <OverallValue metricdata={mt} />
                                 <Metric metricdata={mt} />
                             </div>
+                                                             
                         </div>
                     )}
 
@@ -125,16 +122,9 @@ class OverallValue extends React.Component {
             val = randomNum(metricdata.min, metricdata.max);
         }
 
-        if(metricdata.unit === "minutes"){
+        if(metricdata.unit === "seconds"){
 
-            let secs = 0;
-            if(metricdata.randomize) secs = randomNum(0,59);
-
-            //if(params.incrementSeconds){
-            //    secs = setInterval(secs=>secs++,1000); /* This isn't working */
-            //}
-
-            val = val + ":" + secs.toString().padStart(2,'0');
+            return <Seconds startvalue={val} />;
         }
 
         // Format number
@@ -151,9 +141,47 @@ class OverallValue extends React.Component {
             }
         }
     
-        return val;
+        return (
+            <div className="numberContainer">
+                <div className="number">
+                    { val }
+                </div>
+                <div className='unit'>{metricdata.unit}</div>
+            </div>
+        );
     }
 }
+
+// Must be a function component to use hooks
+const Seconds = (props) => {
+
+  const [count, setCount] = useState(props.startvalue);
+
+  useEffect(() => {
+    setInterval(() => {
+      setCount(prevCount => increment(prevCount));
+    }, 1000);
+  }, []);
+    
+  let units = "seconds";
+  if(count >= 60) units = "minutes";
+  if(count >= 3600) units = "hours";
+    
+  let timerImg = timerRegular;
+  if(count == 0) timerImg = timerReset;
+    
+  return (
+      <div className="timerContainer">
+          <div className="numberContainer">
+            <div className="number">{fmtMSS(count)}</div>
+            <div className="units">{units}</div>
+          </div>
+          <div className="timerImageContainer">
+              <img src={timerImg} />
+          </div>
+      </div>
+    );
+};
 
 class Metric extends React.Component {
     
@@ -313,6 +341,18 @@ function sum(total, num){
 // Random number function
 function randomNum(min, max){
     return Math.floor(Math.random() *  (max - min)) + min;
+}
+
+// Increments a counter, or has a 1% chance to reset to zero
+function increment(p){
+    var rand = (Math.random()*100).toFixed(0);
+    if(rand < 10) return 0;
+    else return p+1;
+}
+
+// Format seconds as MM:SS
+function fmtMSS(s){
+    return(s-(s%=60))/60+(9<s?':':':0')+s;
 }
 
 export default App;
