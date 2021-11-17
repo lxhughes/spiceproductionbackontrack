@@ -103,20 +103,16 @@ class MetricCategories extends React.Component {
 }
 
 class OverallValue extends React.Component {
-    
-    constructor(props) {
-        super(props);
-    } 
-    
+
     render(){
         let metricdata = this.props.metricdata;
         let val = 0; 
         
         // Get the main value: either "value" or a sum of the dataset values
-        if(metricdata.value != undefined){
+        if(metricdata.value !== undefined){
             val = metricdata.value;
         }
-        else if(metricdata.dataset != undefined){
+        else if(metricdata.dataset !== undefined){
             val = metricdata.dataset.map(row => row.value).reduce(sum);
         }
     
@@ -172,7 +168,12 @@ const Seconds = (props) => {
   if(count >= 3600) units = "hours";
 
   let timerImg = timerRegular;
-  if(count == 0) timerImg = timerReset;
+  let imgAlt = "Spice harvester wum wum wum";
+  
+  if(count === 0){
+      timerImg = timerReset;
+      imgAlt = "Worm!!!!"
+  }
     
   return (
       <div className="timerContainer row">
@@ -182,18 +183,14 @@ const Seconds = (props) => {
                 <div className="units">{units}</div>
             </div>
           </div>
-          <div className="timerImageContainer col-sm-9">
-              <img src={timerImg} width="432" height="221" />
+          <div className="timerImageContainer metricVizContainer col-sm-9">
+              <img src={timerImg} width="432" height="221" alt={imgAlt} />
           </div>
       </div>
     );
 };
 
 class Metric extends React.Component {
-    
-    constructor(props) {
-        super(props);
-    }
     
     render(){
         
@@ -222,11 +219,7 @@ class Metric extends React.Component {
 }
 
 class ChartStars extends React.Component {
-    
-    constructor(props) {
-        super(props);
-    }
-    
+
     render(){
         let stars = [];
         const starWidth = 21; // 169
@@ -253,7 +246,7 @@ class ChartStars extends React.Component {
             }
 
             return (
-                <div className='starsContainer col-sm-9'>
+                <div className='starsContainer metricVizContainer col-sm-9'>
                     <ul className='stars' style={starStyle}>
                         {stars}
                     </ul>
@@ -264,10 +257,6 @@ class ChartStars extends React.Component {
 
 class ChartBar extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-    
     render(){
     
         const barData = this.props.metricdata.dataset.map(row => row.value);
@@ -290,7 +279,7 @@ class ChartBar extends React.Component {
         /* End D3 barchart */
 
         return (
-            <div className='barChartContainer col-sm-9'>
+            <div className='barChartContainer metricVizContainer col-sm-9'>
                 <HighchartsReact highcharts={Highcharts} options={barOptions} />
             </div>
         );
@@ -299,10 +288,6 @@ class ChartBar extends React.Component {
     
 class ChartTrend extends React.Component {
 
-    constructor(props) {
-        super(props);
-    }
-    
     render(){    
     
         const lineData = this.props.metricdata.dataset.map(row => row.value);
@@ -328,7 +313,7 @@ class ChartTrend extends React.Component {
 
 
         return (
-            <div className='lineChartContainer col-sm-9'>
+            <div className='lineChartContainer metricVizContainer col-sm-9'>
                 <HighchartsReact highcharts={Highcharts} options={lineOptions} />
             </div>
         );

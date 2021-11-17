@@ -44,6 +44,10 @@
     text-transform: uppercase;
 }
 
+.metricContent.row{
+    margin-left: 0px;
+}
+
 .numberContainer {
     margin-top: 0.25em;
     margin-bottom: 0.25em;
@@ -69,6 +73,14 @@
 .number{
     font-size: 4em;
     line-height: 0.8em;
+}
+
+.timerContainer{
+    padding-left: 0;
+}
+
+.metricVizContainer{
+    padding-left: 1em;
 }
 
 .starsParentContainer.row{
