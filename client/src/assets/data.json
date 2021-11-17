@@ -8,7 +8,7 @@
                     "description": "How much spice has been harvested since House Atreides took control of the ASM?",
                     "charttitle": "Spice Harvested by Region",
                     "type": "bar",
-                    "valueparams": { "unit": "tons" },
+                    "unit": "tons",
                     "categoryName": "regions",
                     "dataset": [
                         {"label": "Arrakeen Metro Area", "value": 29},
@@ -29,7 +29,9 @@
                     "description": "House Harkonnenen left the ASM with only three of fifty silos operational. How many silos are operational now?",
                     "type": "stars",
                     "value": 5,
-                    "valueparams": { "unit": "silos", "min": 0, "max": 50 },
+                    "unit": "silos",
+                    "max": 50,
+                    "min": 0,
                     "topline": true
                 }
             ]
@@ -52,7 +54,7 @@
                         { "label": 8, "value": -2760321 },
                         { "label": 9, "value": -2753210 }
                     ],
-                    "valueparams": { "unit": "solaris" },
+                    "unit": "solaris",
                     "topline": true
                 },
                 {
@@ -72,7 +74,11 @@
                     "description": "How many minutes has it been since the last sandworm attack?",
                     "topline": true,
                     "type": "number",
-                    "valueparams": { "unit": "minutes", "randomize": "true", "incrementSeconds": true, "min": 0, "max": 7 },
+                    "unit": "minutes", 
+                    "randomize": "true", 
+                    "incrementSeconds": true, 
+                    "min": 0, 
+                    "max": 7,
                     "value": 0
                 }
             ]

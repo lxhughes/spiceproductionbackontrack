@@ -61,7 +61,6 @@ ul.stars{
     list-style-type: none;
     padding-left: 0;
     padding-bottom: 1em;
-    float: right;
 }
 li.star{
     display: inline-block;
