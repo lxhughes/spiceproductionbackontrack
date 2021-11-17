@@ -26,30 +26,49 @@
     min-height: 90vh;
 }
 
-.metricContainer{
+.metricCategoryContainer{
     background-color: #ECE3D5;
     padding-left: 1em !important;
 }
 
-.metricContainer:nth-child(3n){
+.metricCategoryContainer:nth-child(3n){
     background-color: #FFF;
 }
-.metricContainer:nth-child(3n-1){
+.metricCategoryContainer:nth-child(3n-1){
     background-color: #FFF;
 }
 
-.metricContainer h2 {
+.metricCategoryContainer h2 {
     color: #04314E;
     font-size: 0.9em;
     text-transform: uppercase;
 }
 
-.metric{
+.numberContainer {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    padding: 0;
+    background-color: #04314E;
+    color: #FFF;
+    text-align: center;
+    border-radius: 1em;
+    height: auto;
+    position: relative;
+}
+
+.numberAndUnit{
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
 }
 
 .number{
     font-size: 4em;
-    color: #04314E;
+    line-height: 0.8em;
 }
 
 .starsParentContainer.row{

@@ -76,7 +76,7 @@ class MetricCategories extends React.Component {
         return (
             <ul className="metricList row g-0">
                 {data.metricCategories.map(mc =>
-                  <li className="metricContainer col-sm-6" key={mc.name}>
+                  <li className="metricCategoryContainer col-sm-6" key={mc.name}>
                     <h2>{mc.name}</h2>
 
                     {mc.metrics.filter(mt => mt.topline).map(mt =>
@@ -84,10 +84,12 @@ class MetricCategories extends React.Component {
                                                              
                            <div className="metric">
                                 <h3>{mt.name}</h3>
-                                <div className='description'>{mt.description}</div>
+                                <div className="description">{mt.description}</div>
                             
-                                <OverallValue metricdata={mt} />
-                                <Metric metricdata={mt} />
+                                <div className="metricContent row">
+                                        <OverallValue metricdata={mt} />
+                                        <Metric metricdata={mt} />
+                                </div>
                             </div>
                                                              
                         </div>
@@ -131,10 +133,10 @@ class OverallValue extends React.Component {
         if(!isNaN(val)){
 
             if(val > 1000000 || val < -1000000){
-                val = (val/1000000).toFixed(2).toString() + "M";
+                val = (val/1000000).toFixed(0).toString() + "M";
             }
             else if(val > 1000 || val < -1000){
-                val = (val/1000).toFixed(2).toString() + "K";
+                val = (val/1000).toFixed(0).toString() + "K";
             }
             else {
                 val = val.toLocaleString();
@@ -142,11 +144,13 @@ class OverallValue extends React.Component {
         }
     
         return (
-            <div className="numberContainer">
-                <div className="number">
-                    { val }
+            <div className="numberContainer col-sm-3">
+                <div className="numberAndUnit">
+                    <div className="number">
+                        { val }
+                    </div>
+                    <div className='unit'>{metricdata.unit}</div>
                 </div>
-                <div className='unit'>{metricdata.unit}</div>
             </div>
         );
     }
@@ -166,18 +170,20 @@ const Seconds = (props) => {
   let units = "seconds";
   if(count >= 60) units = "minutes";
   if(count >= 3600) units = "hours";
-    
+
   let timerImg = timerRegular;
   if(count == 0) timerImg = timerReset;
     
   return (
-      <div className="timerContainer">
-          <div className="numberContainer">
-            <div className="number">{fmtMSS(count)}</div>
-            <div className="units">{units}</div>
+      <div className="timerContainer row">
+          <div className="numberContainer col-sm-3">
+            <div className="numberAndUnit">
+                <div className="number">{fmtMSS(count)}</div>
+                <div className="units">{units}</div>
+            </div>
           </div>
-          <div className="timerImageContainer">
-              <img src={timerImg} />
+          <div className="timerImageContainer col-sm-9">
+              <img src={timerImg} width="432" height="221" />
           </div>
       </div>
     );
@@ -247,7 +253,7 @@ class ChartStars extends React.Component {
             }
 
             return (
-                <div className='starsContainer'>
+                <div className='starsContainer col-sm-9'>
                     <ul className='stars' style={starStyle}>
                         {stars}
                     </ul>
@@ -284,7 +290,7 @@ class ChartBar extends React.Component {
         /* End D3 barchart */
 
         return (
-            <div className='barChartContainer'>
+            <div className='barChartContainer col-sm-9'>
                 <HighchartsReact highcharts={Highcharts} options={barOptions} />
             </div>
         );
@@ -322,7 +328,7 @@ class ChartTrend extends React.Component {
 
 
         return (
-            <div className='lineChartContainer'>
+            <div className='lineChartContainer col-sm-9'>
                 <HighchartsReact highcharts={Highcharts} options={lineOptions} />
             </div>
         );
