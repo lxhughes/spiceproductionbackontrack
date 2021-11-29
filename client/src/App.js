@@ -18,7 +18,7 @@ import starEmpty from './assets/silo-empty.png';
 import timerRegular from './assets/harvester.gif';
 import timerReset from './assets/sandworm.png';
 import data from './assets/data.json';
-import './App.css';
+import styles from './sass/app.scss';
 
 /* A constant with date information */
 const date = {
@@ -169,10 +169,12 @@ const Seconds = (props) => {
 
   let timerImg = timerRegular;
   let imgAlt = "Spice harvester wum wum wum";
+  let width = 577 * 0.5;
+  let height = 295 * 0.5;
   
   if(count === 0){
       timerImg = timerReset;
-      imgAlt = "Worm!!!!"
+      imgAlt = "Sandworm attack!";
   }
     
   return (
@@ -184,7 +186,7 @@ const Seconds = (props) => {
             </div>
           </div>
           <div className="timerImageContainer metricVizContainer col-sm-9">
-              <img src={timerImg} width="432" height="221" alt={imgAlt} />
+              <img src={timerImg} width={width} height={height} alt={imgAlt} />
           </div>
       </div>
     );
