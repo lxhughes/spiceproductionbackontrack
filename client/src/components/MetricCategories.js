@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 /* Components */
-import OverallValue from './OverallValue';
 import Metric from './Metric';
 
 /* Data */
@@ -23,8 +22,7 @@ class MetricCategories extends React.Component {
                                 <div className="description">{mt.description}</div>
                             
                                 <div className="metricContent row">
-                                        <OverallValue metricdata={mt} />
-                                        <Metric metricdata={mt} />
+                                    <Metric metricdata={mt} />
                                 </div>
                             </div>
                                                              

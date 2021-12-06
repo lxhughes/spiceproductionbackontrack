@@ -1,19 +1,15 @@
-import React, { useState, useEffect }  from 'react';
+//import React, { useState, useEffect } from 'react';
+import React from 'react';
+import store from '../store';
 
-/* Local files */
 import timerRegular from '../assets/harvester.gif';
 import timerReset from '../assets/sandworm.png';
 
 // Must be a function component to use hooks
 const Seconds = (props) => {
 
-  const [count, setCount] = useState(props.startvalue);
-
-  useEffect(() => {
-    setInterval(() => {
-      setCount(prevCount => increment(prevCount));
-    }, 1000);
-  }, []);
+  let state = store.getState();
+  let count = state.secondsSinceLastAttack;
     
   let units = "seconds";
   if(count >= 60) units = "minutes";
@@ -21,8 +17,8 @@ const Seconds = (props) => {
 
   let timerImg = timerRegular;
   let imgAlt = "Spice harvester wum wum wum";
-  let width = 577 * 0.75;
-  let height = 295 * 0.75;
+  let width = 577 * 0.5;
+  let height = 295 * 0.5;
   
   if(count === 0){
       timerImg = timerReset;
@@ -46,14 +42,6 @@ const Seconds = (props) => {
 
 export default Seconds;
 
-/* Support Functions */
-
-// Increments a counter, or has a 1% chance to reset to zero
-function increment(p){
-    var rand = (Math.random()*100).toFixed(0);
-    if(rand < 10) return 0;
-    else return p+1;
-}
 
 // Format seconds as MM:SS
 function fmtMSS(s){

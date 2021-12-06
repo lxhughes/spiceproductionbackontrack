@@ -1,21 +1,37 @@
-import React, {Component} from 'react';
+import React from 'react';
+import store from '../store';
+import OverallValue from './OverallValue';
+import ActionButton from './ActionButton';
 
 /* Local files */
-import starFull from '../assets/silo-full.png';
-import starEmpty from '../assets/silo-empty.png';
+import starFull from '../assets/harvester_full.png'; // 49x31
+import starEmpty from '../assets/harvester_empty.png';
 
 class ChartStars extends React.Component {
 
     render(){
+        
+        const metricdata = this.props.metricdata;
+        let val = 0;
+        
+        // Get the main value: either "value" or a sum of the dataset values
+        if(metricdata.value !== undefined){
+            val = metricdata.value;
+        }
+        else if(metricdata.valueStore !== undefined){
+            const state = store.getState();
+            val = state[metricdata.valueStore];
+        }
+        
         let stars = [];
-        const starWidth = 21; // 169
-        const starHeight = 24; // 193
+        const starWidth = 49; // 169
+        const starHeight = 31; // 193
         const starStyle = { width: (starWidth + 2) * 10 + 'px' };
 
 
         // Full Stars
-        for(var i=0; i<this.props.metricdata.value; i++){
-            let falt = 'Full '+this.props.metricdata.unit;
+        for(var i=0; i<val; i++){
+            let falt = 'Full '+metricdata.unit;
             let fstar = (<li className='star' key={i}>
                             <img src={starFull} alt={falt} width={starWidth} height={starHeight} />
                         </li>);
@@ -23,19 +39,25 @@ class ChartStars extends React.Component {
         }
 
             // Empty stars
-            for(var s=this.props.metricdata.value; s<this.props.metricdata.max; s++){
-                let ealt = 'Empty '+this.props.metricdata.unit;
-                let estar = (<li className='star' key={s}>
-                                <img src={starEmpty} alt={ealt} width={starWidth} height={starHeight} />
-                            </li>);
-                stars.push(estar);
+            if(metricdata.max !== undefined){
+                for(var s=val; s<metricdata.max; s++){
+                    let ealt = 'Empty '+metricdata.unit;
+                    let estar = (<li className='star' key={s}>
+                                    <img src={starEmpty} alt={ealt} width={starWidth} height={starHeight} />
+                                </li>);
+                    stars.push(estar);
+                }
             }
 
             return (
-                <div className='starsContainer metricVizContainer col-sm-9'>
-                    <ul className='stars' style={starStyle}>
-                        {stars}
-                    </ul>
+                <div>
+                    <OverallValue metricdata={metricdata} />
+                    <div className='starsContainer metricVizContainer col-sm-9'>
+                        <ul className='stars' style={starStyle}>
+                            {stars}
+                        </ul>
+                        <ActionButton buttondata={metricdata.actionButton} />
+                    </div>
                 </div>
             );     
     }

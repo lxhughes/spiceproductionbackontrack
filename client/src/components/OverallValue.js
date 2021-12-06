@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React from 'react';
+import store from '../store';
 
 /* Components */
 import Seconds from './Seconds'
@@ -13,6 +14,10 @@ class OverallValue extends React.Component {
         if(metricdata.value !== undefined){
             val = metricdata.value;
         }
+        else if(metricdata.valueStore !== undefined){
+            const state = store.getState();
+            val = state[metricdata.valueStore];
+        }
         else if(metricdata.dataset !== undefined){
             val = metricdata.dataset.map(row => row.value).reduce(sum);
         }
@@ -22,7 +27,6 @@ class OverallValue extends React.Component {
         }
 
         if(metricdata.unit === "seconds"){
-
             return <Seconds startvalue={val} />;
         }
 
@@ -30,10 +34,10 @@ class OverallValue extends React.Component {
         if(!isNaN(val)){
 
             if(val > 1000000 || val < -1000000){
-                val = (val/1000000).toFixed(0).toString() + "M";
+                val = (val/1000000).toFixed(1).toString() + "M";
             }
             else if(val > 1000 || val < -1000){
-                val = (val/1000).toFixed(0).toString() + "K";
+               val = (val/1000).toFixed(1).toString() + "K";
             }
             else {
                 val = val.toLocaleString();

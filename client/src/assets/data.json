@@ -1,22 +1,24 @@
 {
+    "initialstate": {
+      "harvesters": 3,
+      "sandwormAttacks": 0,
+      "secondsSinceLastAttack": 60,
+      "applicationTimer": 0,
+      "spiceHarvested": 1800,
+      "profit": 18000
+    },
     "metricCategories": [
         {
             "name": "Production",
             "metrics": [
                 {
-                    "name": "Spice Harvested",
-                    "description": "How much spice has been harvested since House Atreides took control of the ASM?",
+                    "name": "Spice Harvested to Date",
+                    "description": "Each harvester can harvest ten tons of spice per second!",
                     "charttitle": "Spice Harvested by Region",
                     "type": "bar",
                     "unit": "tons",
                     "categoryName": "regions",
-                    "dataset": [
-                        {"label": "Arrakeen Metro Area", "value": 29},
-                        {"label": "Cielago Plain", "value": 86},
-                        {"label": "Great Flat", "value": 42},
-                        {"label": "Carthag", "value": 91},
-                        {"label": "Minor Erg", "value": 17}
-                    ],
+                    "valueStore": "spiceHarvested",
                     "topline": true
                 }
             ]
@@ -26,12 +28,13 @@
             "metrics": [
                 {
                     "name": "Silos Operational",
-                    "description": "House Harkonnenen left the ASM with only three of fifty silos operational. How many silos are operational now?",
+                    "description": "The harvester in Arakeen city walls is protected, but the rest are vulnerable to sandworm attack.",
                     "type": "stars",
-                    "value": 5,
-                    "unit": "silos",
-                    "max": 50,
+                    "valueStore": "harvesters",
+                    "unit": "harvesters",
+                    "max": 15,
                     "min": 0,
+                    "actionButton": { "name": "Buy", "tooltip": "Harvesters cost 100,000 solaris." },
                     "topline": true
                 }
             ]
@@ -40,29 +43,14 @@
             "name": "Financials",
             "metrics": [
                 {
-                    "name": "Profit & Loss",
-                    "description": "Subtracting costs from revenue, what is the total profit this month?",
-                    "charttitle": "Net Profit by Month",
+                    "name": "Profit",
+                    "description": "Spice sells for 100 solaris per ton.",
+                    "charttitle": "Profit by Minute",
                     "type": "trend",
-                    "xAxisUnit": "months",
-                    "dataset": [
-                        { "label": 3, "value": -3129031 },
-                        { "label": 4, "value": -2986909 },
-                        { "label": 5, "value": -2994320 },
-                        { "label": 6, "value": -2896032 },
-                        { "label": 7, "value": -2743291 },
-                        { "label": 8, "value": -2760321 },
-                        { "label": 9, "value": -2753210 }
-                    ],
+                    "xAxisUnit": "minutes",
+                    "valueStore": "profit",
                     "unit": "solaris",
                     "topline": true
-                },
-                {
-                    "name": "Revenue",
-                    "description": "YTD earnings from spice sales",
-                    "type": "number",
-                    "value": 7940321,
-                    "unit": "solaris"
                 }
             ]
         },
@@ -79,7 +67,7 @@
                     "incrementSeconds": true, 
                     "min": 0, 
                     "max": 250,
-                    "value": 0
+                    "valueStore": "secondsSinceLastAttack"
                 }
             ]
         }

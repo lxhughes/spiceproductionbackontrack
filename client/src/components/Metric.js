@@ -1,9 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 /* Components */
 import ChartStars from './ChartStars'
 import ChartBar from './ChartBar'
 import ChartTrend from './ChartTrend'
+import ChartTimer from './ChartTimer'
+import OverallValue from './OverallValue';
 
 class Metric extends React.Component {
     
@@ -26,8 +28,15 @@ class Metric extends React.Component {
                 <ChartTrend metricdata={this.props.metricdata} />
             );
         }
+        else if(this.props.metricdata.type === "timer"){
+            return (
+                <ChartTimer metricdata={this.props.metricdata } />
+            );
+        }
         else {
-            return null;
+            return (
+                <OverallValue metricdata={this.props.metricdata} />
+            );
         }
 
     }

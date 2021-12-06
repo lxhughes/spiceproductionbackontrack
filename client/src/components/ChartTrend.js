@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React from 'react';
+import OverallValue from './OverallValue';
 
 /* Highcharts */
 import Highcharts from 'highcharts';
@@ -6,35 +7,49 @@ import HighchartsReact from 'highcharts-react-official';
 
 class ChartTrend extends React.Component {
 
-    render(){    
+    render(){  
+        
+        const data = this.props.metricdata;
     
-        const lineData = this.props.metricdata.dataset.map(row => row.value);
-        const chartHeight = 250;
+        if(data.dataset !== undefined){
+            const lineData = data.dataset.map(row => row.value);
+            const chartHeight = 250;
 
 
-        let xAxis = this.props.metricdata.dataset.map(row => row.name);
+            let xAxis = data.dataset.map(row => row.name);
 
-        if(this.props.metricdata.xAxisUnit === "months"){
-            xAxis = this.props.metricdata.dataset.map(row => date.months[parseInt(row.label)] + " " + date.year);
+            if(data.xAxisUnit === "months"){
+                xAxis = data.dataset.map(row => date.months[parseInt(row.label)] + " " + date.year);
+            }
+
+            /* Highcharts line chart options */
+            const lineOptions = {};
+            lineOptions.title = { text: data.charttitle, style: { fontSize: "1.2em" }};
+            lineOptions.chart = { type: "line", height: chartHeight, backgroundColor: "transparent" };
+            lineOptions.xAxis = { categories: xAxis };
+            lineOptions.yAxis = { title: { text: data.unit } };
+            lineOptions.legend = { enabled: false };
+            lineOptions.series = [];
+            const firstSeries = { data: lineData, color: "#04314E", name: data.unit, dataLabels: { enabled: false } };
+            lineOptions.series.push(firstSeries);
+
+
+            return (
+                <div>
+                    <OverallValue metricdata={data} />
+                    <div className='lineChartContainer metricVizContainer col-sm-9'>
+                        <HighchartsReact highcharts={Highcharts} options={lineOptions} />
+                    </div>
+                </div>
+            );
         }
-
-        /* Highcharts line chart options */
-        const lineOptions = {};
-        lineOptions.title = { text: this.props.metricdata.charttitle, style: { fontSize: "1.2em" }};
-        lineOptions.chart = { type: "line", height: chartHeight, backgroundColor: "transparent" };
-        lineOptions.xAxis = { categories: xAxis };
-        lineOptions.yAxis = { title: { text: this.props.metricdata.unit } };
-        lineOptions.legend = { enabled: false };
-        lineOptions.series = [];
-        const firstSeries = { data: lineData, color: "#04314E", name: this.props.metricdata.unit, dataLabels: { enabled: false } };
-        lineOptions.series.push(firstSeries);
-
-
-        return (
-            <div className='lineChartContainer metricVizContainer col-sm-9'>
-                <HighchartsReact highcharts={Highcharts} options={lineOptions} />
-            </div>
-        );
+        else {
+            return (
+                <div>
+                    <OverallValue metricdata={data} />
+                </div>
+            );
+        }
     }
 }
 
