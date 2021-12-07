@@ -19,6 +19,7 @@ class MetricCategories extends React.Component {
                                                              
                            <div className="metric">
                                 <h3>{mt.name}</h3>
+                                <div className="question">{mt.question}</div>
                                 <div className="description">{mt.description}</div>
                             
                                 <div className="metricContent row">

@@ -1,26 +1,28 @@
 import React from 'react';
+import store from '../store';
 import OverallValue from './OverallValue';
 
 /* Highcharts */
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 
+// Dataset must be in format: [ { name: blahblah, value: 123 }, ... ]
+
 class ChartTrend extends React.Component {
 
     render(){  
         
         const data = this.props.metricdata;
+        let dataset = data.dataset;
+        
+        const state = store.getState();
+        if(data.datasetStore) dataset = state[data.datasetStore];
     
-        if(data.dataset !== undefined){
-            const lineData = data.dataset.map(row => row.value);
+        if(dataset !== undefined){
+            const lineData = dataset.map(row => row.value);
             const chartHeight = 250;
 
-
-            let xAxis = data.dataset.map(row => row.name);
-
-            if(data.xAxisUnit === "months"){
-                xAxis = data.dataset.map(row => date.months[parseInt(row.label)] + " " + date.year);
-            }
+            let xAxis = dataset.map(row => formatDate(row.name));
 
             /* Highcharts line chart options */
             const lineOptions = {};
@@ -55,11 +57,10 @@ class ChartTrend extends React.Component {
 
 export default ChartTrend;
 
-/* A constant with date information */
-const date = {
-    "months": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-    "month": 10,
-    "day": 17,
-    "year": 10191,
-    "epoch": "A.G."
-};
+// Support function
+
+function formatDate(seconds){
+    let date = new Date(10190, 0);
+    date.setDate(date.getDate() + seconds);
+    return date.toLocaleDateString();
+}

@@ -1,14 +1,12 @@
 import React from 'react';
 import store from '../store';
 
-/* Components */
-import Seconds from './Seconds'
-
 class OverallValue extends React.Component {
 
     render(){
         let metricdata = this.props.metricdata;
         let val = 0; 
+        let units = metricdata.unit;
         
         // Get the main value: either "value" or a sum of the dataset values
         if(metricdata.value !== undefined){
@@ -21,13 +19,15 @@ class OverallValue extends React.Component {
         else if(metricdata.dataset !== undefined){
             val = metricdata.dataset.map(row => row.value).reduce(sum);
         }
-    
-        if(metricdata.randomize){
-            val = randomNum(metricdata.min, metricdata.max);
-        }
 
         if(metricdata.unit === "seconds"){
-            return <Seconds startvalue={val} />;
+              if(val >= 60) units = "minutes";
+              if(val >= 3600) units = "hours";
+        }
+        
+        // Remove S if the value is 1
+        if(units.charAt(units.length-1) === "s"){
+            if(val === 1) units = units.substr(0,units.length-1);
         }
 
         // Format number
@@ -36,21 +36,21 @@ class OverallValue extends React.Component {
             if(val > 1000000 || val < -1000000){
                 val = (val/1000000).toFixed(1).toString() + "M";
             }
-            else if(val > 1000 || val < -1000){
-               val = (val/1000).toFixed(1).toString() + "K";
-            }
+            //else if(val > 1000 || val < -1000){
+            //   val = (val/1000).toFixed(1).toString() + "K";
+            //}
             else {
                 val = val.toLocaleString();
             }
         }
     
         return (
-            <div className="numberContainer col-sm-3">
+            <div className="numberContainer">
                 <div className="numberAndUnit">
                     <div className="number">
-                        { val }
+                        { formatValue(val, metricdata.unit) }
                     </div>
-                    <div className='unit'>{metricdata.unit}</div>
+                    <div className='unit'>{units}</div>
                 </div>
             </div>
         );
@@ -66,7 +66,16 @@ function sum(total, num){
     return total + num;
 }
 
-// Random number function
-function randomNum(min, max){
-    return Math.floor(Math.random() *  (max - min)) + min;
+// Format
+function formatValue(number, unit){
+    if(unit === "seconds"){
+        return fmtMSS(number);
+    }
+    
+    return number;
+}
+
+// Format functions
+function fmtMSS(s){
+    return(s-(s%=60))/60+(9<s?':':':0')+s;
 }

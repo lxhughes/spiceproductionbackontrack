@@ -1,19 +1,21 @@
 {
     "initialstate": {
-      "harvesters": 3,
+      "applicationTimer": 0,    
+      "harvesters": 10,
       "sandwormAttacks": 0,
-      "secondsSinceLastAttack": 60,
-      "applicationTimer": 0,
-      "spiceHarvested": 1800,
-      "profit": 18000
+      "secondsSinceLastAttack": 1,
+      "spiceHarvested": 10,
+      "profit": 100,
+      "profitDataset": []
     },
     "metricCategories": [
         {
             "name": "Production",
             "metrics": [
                 {
-                    "name": "Spice Harvested to Date",
-                    "description": "Each harvester can harvest ten tons of spice per second!",
+                    "name": "Spice Harvested",
+                    "question": "How much spice has been harvested to date?",
+                    "description": "Each harvester can harvest ten tons of spice per day.",
                     "charttitle": "Spice Harvested by Region",
                     "type": "bar",
                     "unit": "tons",
@@ -28,13 +30,13 @@
             "metrics": [
                 {
                     "name": "Silos Operational",
-                    "description": "The harvester in Arakeen city walls is protected, but the rest are vulnerable to sandworm attack.",
+                    "question": "How many operational harvesters do we have?",
+                    "description": "One harvester within Arakeen city walls is protected; the rest are vulnerable to sandworm attack. New harvesters cost 100,000 solaris.",
                     "type": "stars",
                     "valueStore": "harvesters",
                     "unit": "harvesters",
-                    "max": 15,
                     "min": 0,
-                    "actionButton": { "name": "Buy", "tooltip": "Harvesters cost 100,000 solaris." },
+                    "actionButton": { "name": "Buy", "tooltip": "Harvesters cost 100,000 solaris.", "disabled": true },
                     "topline": true
                 }
             ]
@@ -44,11 +46,13 @@
             "metrics": [
                 {
                     "name": "Profit",
-                    "description": "Spice sells for 100 solaris per ton.",
-                    "charttitle": "Profit by Minute",
+                    "question": "How much money do we have?",
+                    "description": "Spice is sold daily for a profit of 100 solaris per ton.",
+                    "charttitle": "Net Profit by Day",
                     "type": "trend",
                     "xAxisUnit": "minutes",
                     "valueStore": "profit",
+                    "datasetStore": "profitDataset",
                     "unit": "solaris",
                     "topline": true
                 }
@@ -59,12 +63,11 @@
             "metrics": [
                 {
                     "name": "Sandworm Attacks",
-                    "description": "How long has it been since the last sandworm attack?",
+                    "question": "How long since the last sandworm attack?",
+                    "description": "Sandworms attack on average once every 10 days.",
                     "topline": true,
                     "type": "timer",
-                    "unit": "seconds", 
-                    "randomize": "true", 
-                    "incrementSeconds": true, 
+                    "unit": "days", 
                     "min": 0, 
                     "max": 250,
                     "valueStore": "secondsSinceLastAttack"

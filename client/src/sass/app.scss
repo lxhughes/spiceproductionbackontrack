@@ -58,6 +58,15 @@ $lightTextColor: #FFFFFF;
     padding-right: 1em;
 }
 
+.question {
+    font-size: 1.2em;
+    color: $darkColor;
+}
+
+.description {
+    font-size: 0.8em;
+}
+
 .numberContainer {
     margin-top: 0.25em;
     margin-bottom: 0.25em;

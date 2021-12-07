@@ -1,5 +1,6 @@
 import React from 'react';
 import OverallValue from './OverallValue';
+import Seconds from './Seconds'
 
 class ChartTimer extends React.Component {
 
@@ -8,7 +9,10 @@ class ChartTimer extends React.Component {
         let metricdata = this.props.metricdata;
 
         return (
-            <OverallValue metricdata={metricdata} />
+            <div>
+                <OverallValue metricdata={metricdata} />
+                <Seconds />
+            </div>
         );
     }
 }

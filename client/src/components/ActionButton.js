@@ -5,11 +5,11 @@ class ActionButton extends React.Component {
     
     render(){
         
-        let buttondata = this.props.buttondata;
-        
+        const buttondata = this.props.buttondata;
+         
         return (
             <div className="ActionButton">
-               <button type="button" className="btn btn-primary" data-toggle="tooltip" title={buttondata.tooltip} onClick={buy}>{buttondata.name}</button>
+               <button type="button" className="btn btn-dark" data-toggle="tooltip" title={buttondata.tooltip} onClick={buy} disabled={buttondata.disabled}>{buttondata.name}</button>
             </div>
         );
     }

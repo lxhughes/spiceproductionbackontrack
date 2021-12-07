@@ -12,6 +12,7 @@ class ChartStars extends React.Component {
     render(){
         
         const metricdata = this.props.metricdata;
+        const state = store.getState();
         let val = 0;
         
         // Get the main value: either "value" or a sum of the dataset values
@@ -19,7 +20,6 @@ class ChartStars extends React.Component {
             val = metricdata.value;
         }
         else if(metricdata.valueStore !== undefined){
-            const state = store.getState();
             val = state[metricdata.valueStore];
         }
         
@@ -27,6 +27,10 @@ class ChartStars extends React.Component {
         const starWidth = 49; // 169
         const starHeight = 31; // 193
         const starStyle = { width: (starWidth + 2) * 10 + 'px' };
+        
+        // When actionbutton is enabled
+        if(state.profit >= 100000) metricdata.actionButton.disabled = false;
+        else metricdata.actionButton.disabled = true;
 
 
         // Full Stars
