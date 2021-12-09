@@ -23,8 +23,7 @@ function buy(){
     const state = store.getState();
     
     if(state.profit >= 100000){
-        store.dispatch({ type: 'profit/buyFrom' });
-        store.dispatch({ type: 'harvesters/increment' });
+        store.dispatch({ type: 'buy/harvester' });
     }
     else{
         console.log("Cannot buy; not enough profit");

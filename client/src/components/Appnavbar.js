@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
-import store from '../store';
 
 import atreidesLogo from '../assets/house_atreides_logo.svg';
 import arrakisLogo from '../assets/arrakis_spice_melange_logo.svg';

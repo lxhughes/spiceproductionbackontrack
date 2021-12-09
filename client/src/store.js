@@ -8,30 +8,26 @@ function counterReducer(state = initialState, action) {
     console.log("counter reducer "+action.type);
 
   switch (action.type) {
-    case 'applicationTimer/increment': 
-      return { ...state, applicationTimer: state.applicationTimer + 1 }   
-    case 'secondsSinceLastAttack/increment':
-       return { ...state, secondsSinceLastAttack: state.secondsSinceLastAttack + 1 }   
-    case 'secondsSinceLastAttack/set':
-       return { ...state, secondsSinceLastAttack: action.payload }
-    case 'secondsSinceLastAttack/reset':
-       return { ...state, secondsSinceLastAttack: 0 }  
-    case 'sandwormAttacks/increment':
-      return { ...state, sandwormAttacks: state.sandwormAttacks + 1 }
-    case 'harvesters/decrement':
-      return { ...state, harvesters: Math.max(1, state.harvesters - 1)}
-    case 'harvesters/increment':
-      return { ...state, harvesters: state.harvesters + 1 }      
-    case 'spiceHarvested/increment':
-      return { ...state, spiceHarvested: state.spiceHarvested + (state.harvesters * 10) }
-    case 'profit/increment': 
-      return { ...state, profit: state.profit + (state.harvesters * 1000) }
-    case 'profit/buyFrom':
-      return { ...state, profit: state.profit - 100000 }
-    case 'profitDataset/increment':
-      return { ...state, profitDataset: [...state.profitDataset, { "name": state.applicationTimer, "value": state.profit } ] }      
-    default:
-      return state
+      case 'dayPassed/attack': return {
+          ...state,
+          secondsSinceLastAttack: 0,
+          mostRecentAttackTime: action.payload,
+          harvesters: Math.max(1, state.harvesters - 1)
+      };
+      case 'dayPassed/harvest': return {
+          ...state,
+          secondsSinceLastAttack: action.payload - state.mostRecentAttackTime, // Instead of incrementing, calculate based on most recent attack time and passed current time. This avoids double incrementing. This is a hack that doesn't solve the problems below. 
+          profit: state.profit + (state.harvesters * 1000),
+          spiceHarvested: state.spiceHarvested + (state.harvesters * 10),
+          profitDataset: [...state.profitDataset, { "name": state.applicationTimer, "value": state.profit }]
+      };
+      case 'buy/harvester': return {
+          ...state,
+          harvesters: state.harvesters + 1,
+          profit: state.profit - 100000
+      };
+      default:
+        return state
   }
 }
 
