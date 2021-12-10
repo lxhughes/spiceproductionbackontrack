@@ -1,29 +1,58 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import store from './store';
 
 import Appnavbar from './components/Appnavbar';
 import MetricCategories from './components/MetricCategories';
 
-// Must be a function component to use hooks
-const App = () => { 
+// Actions
+const attack = () => ({ type: 'dayPassed/attack' });
+const harvest = () => ({ type: 'dayPassed/harvest' });
+
+// Thunks
+const incrementTimer = () => (dispatch, getState) => {
+    console.log("Increment Timer Thunk");
     
-    const [count, setCount] = useState(0);
+    var rand = (Math.random()*100).toFixed(0);
+    
+    if(rand < 10){ // sandworm attack
+        dispatch(attack());
+    }
+    else{ // production phase
+        dispatch(harvest());
+    }
+};
 
-      useEffect(() => {          
-        const timer = setInterval(() => {
-          setCount(
-              prevCount => Increment(prevCount)
-          );
-        }, 1000);
-        return () => {
-          clearInterval(timer);
-        };
-      }, []);    
+const recurUpdate = (secs) => (dispatch, getState) => {
+    
+  console.log("Update");
+    
+  setTimeout(() => {
+      
+      dispatch(incrementTimer());
+      
+      //recursively dispatch this thunk
+      dispatch(recurUpdate());
+      
+  }, 1000);
+}
 
+
+// Must be a function component to use hooks
+class App extends React.Component { 
+    
+    componentDidMount(){
+        this.props.makeUpdate();
+    }
+    
+    render(){
+        
+        console.log("app applicaiton timer: "+ this.props.applicationTimer);
+        
       return (
         <div className="App">
           <header className="App-header">
-            <Appnavbar daysElapsed={count} />
+            <Appnavbar />
           </header>
 
           <div id="main">
@@ -32,23 +61,19 @@ const App = () => {
 
         </div>
       );
+    }
 }
 
-export default App;
+const mapStateToProps = (state) => {
+    return {
+        applicationTimer: state.applicationTimer,
+    };
+};
 
-// Increments a counter, or has a 1% chance to reset to zero
-function Increment(p){
-    
-    console.log("Increment "+p);
-    
-    var rand = (Math.random()*100).toFixed(0);
-    
-    if(rand < 10){ // sandworm attack
-        store.dispatch({ type: 'dayPassed/attack', payload: p });
-    }
-    else{ // production phase
-        store.dispatch({ type: 'dayPassed/harvest', payload: p });
-    }
-    
-    return p+1;
-}
+const mapDispatchToProps = (dispatch) => {
+    return {
+       makeUpdate: () => dispatch(recurUpdate())
+    };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

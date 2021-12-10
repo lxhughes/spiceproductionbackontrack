@@ -1,13 +1,16 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import store from '../store';
 
 import atreidesLogo from '../assets/house_atreides_logo.svg';
 import arrakisLogo from '../assets/arrakis_spice_melange_logo.svg';
 
-const Appnavbar = (props) => { 
+const Appnavbar = () => { 
         
-    const daysElapsed = props.daysElapsed;
+    //const daysElapsed = props.daysElapsed;
+    const state = store.getState();
+    const daysElapsed = state.applicationTimer;
 
     return (
         <Navbar bg="light" expand="lg">
