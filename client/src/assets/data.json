@@ -7,7 +7,10 @@
       "mostRecentAttackTime": 0,
       "spiceHarvested": 100,
       "profit": 1000,
-      "profitDataset": []
+      "profitDataset": [],
+      "spiceHarvestedGoal": 20000,
+      "youWin": false,
+      "youLose": false
     },
     "metricCategories": [
         {
@@ -16,9 +19,10 @@
                 {
                     "name": "Spice Harvested",
                     "question": "How much spice has been harvested to date?",
-                    "description": "Each harvester can harvest ten tons of spice per day.",
-                    "charttitle": "Spice Harvested by Region",
-                    "type": "bar",
+                    "description": "Each harvester can harvest ten tons of spice per day. We must harvest 20,000 tons of spice by end of year to impress the emperor.",
+                    "charttitle": "Progress Toward Goal",
+                    "type": "thermometer",
+                    "max": 20000,
                     "unit": "tons",
                     "categoryName": "regions",
                     "valueStore": "spiceHarvested",
@@ -51,6 +55,7 @@
                     "description": "Spice is sold daily for a profit of 100 solaris per ton.",
                     "charttitle": "Net Profit by Day",
                     "type": "trend",
+                    
                     "xAxisUnit": "minutes",
                     "valueStore": "profit",
                     "datasetStore": "profitDataset",

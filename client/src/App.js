@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import store from './store';
+import { Modal, Button } from 'react-bootstrap';
 
 import Appnavbar from './components/Appnavbar';
 import MetricCategories from './components/MetricCategories';
@@ -8,11 +8,26 @@ import MetricCategories from './components/MetricCategories';
 // Actions
 const attack = () => ({ type: 'dayPassed/attack' });
 const harvest = () => ({ type: 'dayPassed/harvest' });
+const win = () => ({ type: 'endGame/youWin' });
+const lose = () => ({ type: 'endGame/youLose' });
+const restart = () => ({ type: 'restartGame' });
 
 // Thunks
-const incrementTimer = () => (dispatch, getState) => {
-    console.log("Increment Timer Thunk");
+const checkWin = () => (dispatch, getState) => {
     
+    const state = getState();
+    
+    if(state.spiceHarvested >= state.spiceHarvestedGoal){
+        dispatch(win());
+    }
+    else {
+        dispatch(lose());
+    }
+    
+}
+
+const incrementTimer = () => (dispatch, getState) => {
+
     var rand = (Math.random()*100).toFixed(0);
     
     if(rand < 10){ // sandworm attack
@@ -25,15 +40,22 @@ const incrementTimer = () => (dispatch, getState) => {
 
 const recurUpdate = (secs) => (dispatch, getState) => {
     
-  console.log("Update");
+  const state = getState();
     
   setTimeout(() => {
       
-      dispatch(incrementTimer());
+      if(state.applicationTimer >= 365){ // Win condition
+          
+          dispatch(checkWin());
+          
+      }
+      else {
       
-      //recursively dispatch this thunk
-      dispatch(recurUpdate());
+          dispatch(incrementTimer());
       
+          //recursively dispatch this thunk
+          dispatch(recurUpdate());
+      }
   }, 1000);
 }
 
@@ -46,9 +68,7 @@ class App extends React.Component {
     }
     
     render(){
-        
-        console.log("app applicaiton timer: "+ this.props.applicationTimer);
-        
+
       return (
         <div className="App">
           <header className="App-header">
@@ -58,6 +78,22 @@ class App extends React.Component {
           <div id="main">
             <MetricCategories />
           </div>
+          
+          <Modal show={this.props.youWin}>
+            <Modal.Title className="modalTitle modalWin">You impressed the emperor!</Modal.Title>
+            <Modal.Body>Somehow, you did it. Despite constant sandworm attacks and attempts at Harkonnen betrayal, under your cunning leadership, you led the spice melange to prosperity and impressed the emperor. You will peacefully rule Arrakis for a long, long time (barring the unlikely eventuality of Fremen uprising).</Modal.Body>
+            <Modal.Footer>
+                <Button variant="primary" onClick={this.props.handleRestar}>Restart Game</Button>
+            </Modal.Footer>
+          </Modal>
+          
+          <Modal show={this.props.youLose}>
+            <Modal.Title className="modalTitle modalLose">Baron Harkonnen Attacks!</Modal.Title>
+            <Modal.Body>You failed to harvest enough spice, and the Emperor was unimpressed. Harkonnen forces made a surprise attack on Arakeen and slew the Duke. The web developer escaped in an ornithopter and began a new life as a wandering space adventurer.</Modal.Body>
+            <Modal.Footer>
+                <Button variant="primary" onClick={this.props.handleRestart}>Restart Game</Button>
+            </Modal.Footer>
+          </Modal>
 
         </div>
       );
@@ -67,12 +103,18 @@ class App extends React.Component {
 const mapStateToProps = (state) => {
     return {
         applicationTimer: state.applicationTimer,
+        youWin: state.youWin,
+        youLose: state.youLose
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-       makeUpdate: () => dispatch(recurUpdate())
+       makeUpdate: () => dispatch(recurUpdate()),
+       handleRestart: () => { 
+           dispatch(restart());
+           dispatch(recurUpdate());
+       }
     };
 };
 

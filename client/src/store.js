@@ -6,8 +6,8 @@ const initialState = data.initialstate;
 
 function counterReducer(state = initialState, action) {
     
-    console.log("counter reducer "+action.type);
-
+    console.log(action.type);
+    
   switch (action.type) {
       case 'dayPassed/attack': return {
           ...state,
@@ -28,6 +28,15 @@ function counterReducer(state = initialState, action) {
           harvesters: state.harvesters + 1,
           profit: state.profit - 100000
       };
+      case 'endGame/youWin': return {
+          ...state,
+          youWin: true
+      };
+      case 'endGame/youLose': return {
+         ...state,
+         youLose: true
+      };
+      case 'restartGame': return initialState;
       default:
         return state
   }
