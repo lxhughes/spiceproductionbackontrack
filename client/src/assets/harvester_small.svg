@@ -8,9 +8,10 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.1.1 (c3084ef, 2021-09-22)"
-   sodipodi:docname="harvester_empty.svg"
+   sodipodi:docname="harvester_small.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
@@ -23,17 +24,41 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="1.0226992"
-     inkscape:cx="417.03367"
-     inkscape:cy="402.8555"
+     inkscape:zoom="2.8926302"
+     inkscape:cx="417.44016"
+     inkscape:cy="272.07073"
      inkscape:window-width="1312"
      inkscape:window-height="802"
-     inkscape:window-x="1757"
-     inkscape:window-y="177"
+     inkscape:window-x="128"
+     inkscape:window-y="23"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1" />
   <defs
      id="defs2">
+    <linearGradient
+       id="linearGradient3609"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#0081de;stop-opacity:1;"
+         offset="0"
+         id="stop3607" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3585"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3583" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3507"
+       inkscape:swatch="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop3505" />
+    </linearGradient>
     <linearGradient
        id="linearGradient2643"
        inkscape:swatch="solid">
@@ -42,6 +67,76 @@
          offset="0"
          id="stop2641" />
     </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3609"
+       id="linearGradient4189"
+       gradientUnits="userSpaceOnUse"
+       x1="105.42717"
+       y1="64.34594"
+       x2="151.9984"
+       y2="64.34594"
+       gradientTransform="matrix(0.28736283,0,0,0.35507634,76.495297,57.908555)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3609"
+       id="linearGradient4191"
+       gradientUnits="userSpaceOnUse"
+       x1="105.42717"
+       y1="64.34594"
+       x2="151.9984"
+       y2="64.34594"
+       gradientTransform="matrix(0.28736283,0,0,0.35507634,76.495297,57.908555)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3609"
+       id="linearGradient4193"
+       gradientUnits="userSpaceOnUse"
+       x1="105.42717"
+       y1="64.34594"
+       x2="151.9984"
+       y2="64.34594"
+       gradientTransform="matrix(0.28736283,0,0,0.35507634,76.495297,57.908555)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3609"
+       id="linearGradient4203"
+       gradientUnits="userSpaceOnUse"
+       x1="105.42717"
+       y1="64.34594"
+       x2="151.9984"
+       y2="64.34594"
+       gradientTransform="matrix(0.28736283,0,0,0.35507634,76.495297,57.908555)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3609"
+       id="linearGradient4205"
+       gradientUnits="userSpaceOnUse"
+       x1="105.42717"
+       y1="64.34594"
+       x2="151.9984"
+       y2="64.34594"
+       gradientTransform="matrix(0.28736283,0,0,0.35507634,76.495297,57.908555)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3609"
+       id="linearGradient4207"
+       gradientUnits="userSpaceOnUse"
+       x1="105.42717"
+       y1="64.34594"
+       x2="151.9984"
+       y2="64.34594"
+       gradientTransform="matrix(0.28736283,0,0,0.35507634,76.495297,57.908555)" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3609"
+       id="linearGradient4209"
+       gradientUnits="userSpaceOnUse"
+       x1="105.42717"
+       y1="64.34594"
+       x2="151.9984"
+       y2="64.34594"
+       gradientTransform="matrix(0.28736283,0,0,0.35507634,76.495297,57.908555)" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -135,6 +230,126 @@
          d="m 125.52018,60.073163 17.09544,3.862521 -0.76267,1.683822 h -22.42583 z"
          sodipodi:nodetypes="ccccc" />
     </g>
+    <rect
+       style="fill:#5ab7b7;fill-opacity:1;stroke:url(#linearGradient4189);stroke-width:0.419;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect2297-9"
+       width="3.9816692"
+       height="1.7096357"
+       x="109.1583"
+       y="77.805565"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-amored.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="rect1204-0"
+       style="fill:#0056b7;fill-opacity:1;stroke:url(#linearGradient4191);stroke-width:0.419;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 109.1583,77.805561 h 8.5419 l 2.23642,5.280123 h -12.91308 z"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-amored.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#5ab7b7;fill-opacity:1;stroke:url(#linearGradient4193);stroke-width:0.419;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect958-5"
+       width="12.35348"
+       height="4.5258274"
+       x="107.21775"
+       y="76.648422"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-amored.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#5ab7b7;fill-opacity:1;stroke:none;stroke-width:0.434175;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect1026-22"
+       width="1.2956659"
+       height="3.7926986"
+       x="-140.41653"
+       y="-8.6193085"
+       transform="matrix(-0.83928584,-0.54369043,0.20066206,-0.97966052,0,0)"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-amored.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#5ab7b7;fill-opacity:1;stroke:none;stroke-width:0.438975;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect1026-2-7"
+       width="1.3284153"
+       height="4.0957713"
+       x="-140.86142"
+       y="-3.7197516"
+       transform="matrix(-0.81859493,-0.57437125,0.1858138,-0.98258497,0,0)"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-amored.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#5ab7b7;fill-opacity:1;stroke:none;stroke-width:0.425903;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect1026-2-5-3"
+       width="1.2359017"
+       height="3.1899018"
+       x="-134.28175"
+       y="-20.603012"
+       transform="matrix(-0.8798709,-0.47521279,0.23858128,-0.97112253,0,0)"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-amored.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#5ab7b7;fill-opacity:1;stroke:none;stroke-width:0.420281;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect1026-2-1-79"
+       width="1.1847333"
+       height="2.5941598"
+       x="-132.08109"
+       y="-32.192089"
+       transform="matrix(-0.91787247,-0.39687546,0.29337082,-0.95599872,0,0)"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-amored.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#1d7cff;fill-opacity:1;stroke:url(#linearGradient4203);stroke-width:0.419;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect2573-0"
+       width="3.5935783"
+       height="4.5600681"
+       x="107.21775"
+       y="76.648422"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-amored.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#5ab7b7;fill-opacity:1;stroke:url(#linearGradient4205);stroke-width:0.419;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect2861-2"
+       width="0.44629461"
+       height="1.5816934"
+       x="117.25391"
+       y="77.385605"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-amored.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#5ab7b7;fill-opacity:1;stroke:url(#linearGradient4207);stroke-width:0.419;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect2861-7-3"
+       width="0.44629461"
+       height="1.6631048"
+       x="117.97575"
+       y="77.353485"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-amored.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <rect
+       style="fill:#5ab7b7;fill-opacity:1;stroke:url(#linearGradient4209);stroke-width:0.419;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       id="rect2861-0-9"
+       width="0.44629461"
+       height="1.8173167"
+       x="118.67108"
+       y="77.263947"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-amored.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
+    <path
+       id="rect3415-9"
+       style="fill:#014fb7;fill-opacity:1;stroke:none;stroke-width:0.419;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke markers fill"
+       d="m 112.56513,79.239114 4.9126,1.37149 -0.21917,0.597885 h -6.44435 z"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/Users/logan/Documents/GitHub/spiceproductionbackontrack/client/src/assets/harvester-amored.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <g
        id="g1314"
        transform="matrix(0.28736283,0,0,0.35507634,75.707637,34.037139)">

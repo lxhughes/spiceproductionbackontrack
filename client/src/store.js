@@ -6,14 +6,12 @@ const initialState = data.initialstate;
 
 function counterReducer(state = initialState, action) {
     
-    console.log(action.type);
-    
   switch (action.type) {
       case 'dayPassed/attack': return {
           ...state,
           applicationTimer: state.applicationTimer + 1,
           secondsSinceLastAttack: 0,
-          harvesters: Math.max(1, state.harvesters - 1)
+          harvesters: Math.max(state.safeHarvesters, state.harvesters - 1)
       };
       case 'dayPassed/harvest': return {
           ...state,
@@ -27,6 +25,11 @@ function counterReducer(state = initialState, action) {
           ...state,
           harvesters: state.harvesters + 1,
           profit: state.profit - 100000
+      };
+      case 'buy/armor': return {
+          ...state,
+         safeHarvesters: state.safeHarvesters + 1,
+         profit: state.profit - 200000
       };
       case 'endGame/youWin': return {
           ...state,

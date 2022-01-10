@@ -2,6 +2,7 @@
     "initialstate": {   
       "applicationTimer": 0,
       "harvesters": 10,
+      "safeHarvesters": 1,
       "sandwormAttacks": 0,
       "secondsSinceLastAttack": 1,
       "mostRecentAttackTime": 0,
@@ -40,8 +41,12 @@
                     "type": "stars",
                     "valueStore": "harvesters",
                     "unit": "harvesters",
+                    "safeStarsValueStore": "safeHarvesters",
                     "min": 0,
-                    "actionButton": { "name": "Buy", "tooltip": "Harvesters cost 100,000 solaris.", "disabled": true },
+                    "actionButtons": [
+                        { "name": "Buy - 100K", "cost": 100000, "action": "buy", "tooltip": "New harvesters can be eaten by sandworms.", "disabled": true },
+                        { "name": "Armor - 200K", "cost": 200000, "action": "safe", "tooltip": "Armor a harvester to protect it from future sandworm attack.", "disabled": true }
+                    ],
                     "topline": true
                 }
             ]

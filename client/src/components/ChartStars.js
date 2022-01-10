@@ -6,6 +6,7 @@ import ActionButton from './ActionButton';
 /* Local files */
 import starFull from '../assets/harvester_full.png'; // 49x31
 import starEmpty from '../assets/harvester_empty.png';
+import starSafe  from '../assets/harvester_armored.png';
 
 class ChartStars extends React.Component {
 
@@ -15,7 +16,7 @@ class ChartStars extends React.Component {
         const state = store.getState();
         let val = 0;
         
-        // Get the main value: either "value" or a sum of the dataset values
+        // Get the main value: either "value" or a sum of the dataset values        
         if(metricdata.value !== undefined){
             val = metricdata.value;
         }
@@ -23,20 +24,33 @@ class ChartStars extends React.Component {
             val = state[metricdata.valueStore];
         }
         
+        // Get the safe stars (armored/unloseable), if any, and subtract them from main value
+        let safeStars = 0;
+        if(metricdata.valueStore !== undefined){
+            safeStars = state[metricdata.safeStarsValueStore];
+        }
+        val = val - safeStars;
+        
         let stars = [];
         const starWidth = 49; // 169
         const starHeight = 31; // 193
         const starStyle = { width: (starWidth + 2) * 10 + 'px' };
+
+        // Safe stars (if any)
+        for(var i=0; i<safeStars; i++){
+            let salt = 'Safe '+metricdata.unit;
+            let key = i;
+            let sstar = (<li className='star' key={key}>
+                            <img src={starSafe} alt={salt} width={starWidth} height={starHeight} />
+                        </li>);
+            stars.push(sstar);
+        }
         
-        // When actionbutton is enabled
-        if(state.profit >= 100000) metricdata.actionButton.disabled = false;
-        else metricdata.actionButton.disabled = true;
-
-
-        // Full Stars
-        for(var i=0; i<val; i++){
+        // Full Stars (not safe)
+        for(var j=0; j<val; j++){
             let falt = 'Full '+metricdata.unit;
-            let fstar = (<li className='star' key={i}>
+            let key = j + safeStars;
+            let fstar = (<li className='star' key={key}>
                             <img src={starFull} alt={falt} width={starWidth} height={starHeight} />
                         </li>);
             stars.push(fstar);
@@ -46,12 +60,24 @@ class ChartStars extends React.Component {
             if(metricdata.max !== undefined){
                 for(var s=val; s<metricdata.max; s++){
                     let ealt = 'Empty '+metricdata.unit;
-                    let estar = (<li className='star' key={s}>
+                    let key = s + val + safeStars;
+                    let estar = (<li className='star' key={key}>
                                     <img src={starEmpty} alt={ealt} width={starWidth} height={starHeight} />
                                 </li>);
                     stars.push(estar);
                 }
             }
+        
+          // Action buttons
+          let actionbuttons = [];
+          for(var k=0; k<metricdata.actionButtons.length; k++){                
+              
+              // HTML of action button
+              let button = (<li className='actionButtonItem' key={k}>
+                        <ActionButton buttondata={metricdata.actionButtons[k]} />
+                    </li>);
+              actionbuttons.push(button);
+          }
 
             return (
                 <div>
@@ -60,7 +86,9 @@ class ChartStars extends React.Component {
                         <ul className='stars' style={starStyle}>
                             {stars}
                         </ul>
-                        <ActionButton buttondata={metricdata.actionButton} />
+                        <ul className='actionButtons'>
+                            {actionbuttons}
+                        </ul>
                     </div>
                 </div>
             );     

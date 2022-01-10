@@ -97,13 +97,16 @@ $lightTextColor: #FFFFFF;
     padding-left: 1em;
 }
 
-ul.stars{
+ul.stars, ul.actionButtons {
     list-style-type: none;
     padding-left: 0;
     padding-bottom: 1em;
 }
-li.star{
+li.star, li.actionButtonItem{
     display: inline-block;
     margin-left: 0;
     margin-right: 2px;
+}
+actionButton {
+    display: inline-block;
 }
