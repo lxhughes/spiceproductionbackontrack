@@ -1,2 +1,2 @@
 # spiceproductionbackontrack
- Tracking House Atreides' progress on Arrakis
+Both a data viz demo and a game! Play it on spiceproductionbackontrack.com 
