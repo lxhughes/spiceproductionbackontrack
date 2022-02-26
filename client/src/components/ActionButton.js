@@ -18,6 +18,7 @@ class ActionButton extends React.Component {
         let action = nullFunc;
         if(buttondata.action === "buy") action = buy;
         if(buttondata.action === "safe") action = safe;
+        if(buttondata.action === "sell") action = sell;
          
         return (
             <div className="ActionButton">
@@ -60,5 +61,13 @@ function safe(){
     else{
         store.dispatch({ type: 'buy/armor' });
     }
+    
+}
+
+function sell(){
+    
+    const state = store.getState();
+    
+    store.dispatch({ type: 'sell/bank' });
     
 }

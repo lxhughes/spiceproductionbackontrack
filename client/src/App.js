@@ -17,7 +17,7 @@ const checkWin = () => (dispatch, getState) => {
     
     const state = getState();
     
-    if(state.spiceHarvested >= state.spiceHarvestedGoal){
+    if(state.spiceSold >= state.spiceSoldGoal){
         dispatch(win());
     }
     else {

@@ -6,10 +6,11 @@
       "sandwormAttacks": 0,
       "secondsSinceLastAttack": 1,
       "mostRecentAttackTime": 0,
-      "spiceHarvested": 100,
-      "profit": 1000,
+      "spiceSold": 0,
+      "spiceBank": 0,
+      "profit": 0,
       "profitDataset": [],
-      "spiceHarvestedGoal": 20000,
+      "spiceSoldGoal": 20000,
       "youWin": false,
       "youLose": false
     },
@@ -18,16 +19,27 @@
             "name": "Production",
             "metrics": [
                 {
-                    "name": "Spice Harvested",
-                    "question": "How much spice has been harvested to date?",
-                    "description": "Each harvester can harvest ten tons of spice per day. We must harvest 20,000 tons of spice by end of year to impress the emperor.",
+                    "name": "Spice Sold",
+                    "question": "How much spice has been sold to date?",
+                    "description": "Each harvester can harvest ten tons of spice per day, which goes into spice bank to be sold. We must sell 20,000 tons of spice by end of year to impress the emperor.",
                     "charttitle": "Progress Toward Goal",
                     "type": "thermometer",
                     "max": 20000,
                     "unit": "tons",
-                    "categoryName": "regions",
-                    "valueStore": "spiceHarvested",
+                    "valueStore": "spiceSold",
                     "topline": true
+                },
+                {
+                    "name": "Spice Bank",
+                    "question": "How much spice is awaiting sale?",
+                    "description": "Each harvester can harvest ten tons of spice per day, which is added to the bank. Sell when rates are good, but be careful - sandworm attacks reduce our bank.",
+                    "type": "number",
+                    "unit": "tons",
+                    "valueStore": "spiceBank",
+                    "topline": true,
+                    "actionButtons": [
+                        { "name": "Sell", "action": "sell", "tooltip": "Sell all spice in current bank.", "disabled": false }
+                    ]
                 }
             ]
         },
@@ -35,7 +47,7 @@
             "name": "Operations",
             "metrics": [
                 {
-                    "name": "Silos Operational",
+                    "name": "Harvesters",
                     "question": "How many operational harvesters do we have?",
                     "description": "One harvester within Arakeen city walls is protected; the rest are vulnerable to sandworm attack. New harvesters cost 100,000 solaris.",
                     "type": "stars",

@@ -17,9 +17,14 @@ function counterReducer(state = initialState, action) {
           ...state,
           applicationTimer: state.applicationTimer + 1,
           secondsSinceLastAttack: state.secondsSinceLastAttack + 1,
-          spiceHarvested: state.spiceHarvested + (state.harvesters * 10),
-          profit: state.profit + (state.harvesters * 1000),
-          profitDataset: [...state.profitDataset, { "name": state.applicationTimer, "value": state.profit }]
+          spiceBank: state.spiceBank + (state.harvesters * 10)
+      };
+      case 'sell/bank': return {
+          ...state,
+          spiceSold: state.spiceSold + state.spiceBank,
+          profit: state.profit + (state.spiceBank * 1000),
+          profitDataset: [...state.profitDataset, { "name": state.applicationTimer, "value": state.profit }],
+          spiceBank: 0
       };
       case 'buy/harvester': return {
           ...state,

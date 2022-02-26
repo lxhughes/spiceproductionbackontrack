@@ -43,9 +43,15 @@ class OverallValue extends React.Component {
                 val = val.toLocaleString();
             }
         }
+        
+        // If the maximum was met, set a class
+        let maxMet = false;
+        if(metricdata.max){
+            if(val >= metricdata.max) maxMet = true;    
+        }
     
         return (
-            <div className="numberContainer">
+            <div className={'numberContainer ${maxMet ? "maxmet" : "" }'}>
                 <div className="numberAndUnit">
                     <div className="number">
                         { formatValue(val, metricdata.unit) }

@@ -1,7 +1,6 @@
 import React from 'react';
 import store from '../store';
 import OverallValue from './OverallValue';
-import ActionButton from './ActionButton';
 
 /* Local files */
 import starFull from '../assets/harvester_full.png'; // 49x31
@@ -67,17 +66,6 @@ class ChartStars extends React.Component {
                     stars.push(estar);
                 }
             }
-        
-          // Action buttons
-          let actionbuttons = [];
-          for(var k=0; k<metricdata.actionButtons.length; k++){                
-              
-              // HTML of action button
-              let button = (<li className='actionButtonItem' key={k}>
-                        <ActionButton buttondata={metricdata.actionButtons[k]} />
-                    </li>);
-              actionbuttons.push(button);
-          }
 
             return (
                 <div>
@@ -85,9 +73,6 @@ class ChartStars extends React.Component {
                     <div className='starsContainer metricVizContainer col-sm-9'>
                         <ul className='stars' style={starStyle}>
                             {stars}
-                        </ul>
-                        <ul className='actionButtons'>
-                            {actionbuttons}
                         </ul>
                     </div>
                 </div>
